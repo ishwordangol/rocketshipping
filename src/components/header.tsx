@@ -121,14 +121,14 @@ const Header = () => {
 
             <div className="flex items-center space-x-4 headerRight">
               <Link
-                href="tel:+61 3 8593 5678"
+                href="tel:+977-9851053926"
                 className={`flex items-center font-bold space-x-2 text-lg ${
                   isPinned ? "text-black" : "text-white"
                 }`}
               >
                 <span className="flex items-center justify-center icon-phone-call text-2xl"></span>
                 <span className="flex items-center justify-center">
-                  (+61) 411 205 026
+                  (+977) 9851053926
                 </span>
               </Link>
               <Link href="#" className="RSbutton">

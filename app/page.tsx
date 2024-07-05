@@ -16,6 +16,9 @@ import Gadikoparts from "@/public/assets/images/Clients/gadiko-parts-logo.png";
 import Huawei from "@/public/assets/images/Clients/huawei.png";
 import Ncell from "@/public/assets/images/Clients/ncell.png";
 import Ntc from "@/public/assets/images/Clients/ntc.png";
+import DomesticShopping from "@/public/assets/images/services/domestic-shopping.jpg";
+import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
+import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
 
 const page = () => {
   const herosettings = {
@@ -79,24 +82,22 @@ const page = () => {
     buttons: ["Learn more about us"],
     otherContent: [
       {
+        icon: "icon-truck",
         count: "950",
         tag: "+",
         description: "Completed Delivery",
       },
       {
+        icon: "icon-user-check",
         count: "200",
         tag: "+",
         description: "Satisfied Clients",
       },
       {
-        count: "3",
-        tag: "yrs",
-        description: "Industry Experience",
-      },
-      {
-        count: "15",
+        icon: "icon-users",
+        count: "100",
         tag: "+",
-        description: "Team Members",
+        description: "Qualified Members",
       },
     ],
     features: [
@@ -245,30 +246,161 @@ const page = () => {
                       );
                     })}
                   </div>
-
-                  {/* <div className="grid  grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-                {about.otherContent.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className="p-4 bg-secondarylight border border-secondary rounded-md"
-                    >
-                      <h2>
-                        <span className="text-secondary text-3xl font-bold">
-                          {item.count} {item.tag}
-                        </span>
-                      </h2>
-                      <p className="mt-3 text-xs font-bold">
-                        {item.description}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div> */}
                   <div className="mt-4 inline-block">
                     <Link href="#" className="mt-8 RSbutton">
                       <span>More About Us</span>
                       <i className="icon-chevron-right text-white text-xl font-bold"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="countWrapper py-24 bg-primary">
+        <div className="container">
+          <div className="flex justify-center">
+            <div className="2xl:max-w-7xl flex items-center justify-between gap-32">
+              <div>
+                <h4 className="text-white">Fun facts about Rocket Shipping </h4>
+                <h2 className="mt-4 text-white text-5xl font-bold">
+                  Numbers speak
+                </h2>
+              </div>
+              <div>
+                <div className="flex items-center text-center gap-16">
+                  {about.otherContent.map((item, index) => {
+                    return (
+                      <div key={index}>
+                        <span
+                          className={`inline-block text-4xl text-white ${item.icon}`}
+                        ></span>
+                        <h2 className="mt-3 text-white text-5xl font-bold">
+                          {item.count} {item.tag}
+                        </h2>
+                        <p className="text-white mt-3 font-bold">
+                          {item.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="servicesWrapper py-32">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-base uppercase font-bold text-primary">
+              Our Services
+            </h3>
+            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+              WHAT WE ARE OFFERING
+            </h2>
+          </div>
+          <div className="mt-12 servicesWrapper grid grid-cols-3 gap-8">
+            <div className="service-block relative mb-8">
+              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
+                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
+                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
+                    <Link href="#">
+                      <Image
+                        src={DomesticShopping}
+                        alt="services"
+                        className="transition-all ease-linear duration-300 grayscale"
+                      />
+                    </Link>
+                  </figure>
+                </div>
+                <div className="service-contentbox mx-4">
+                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
+                    <Link href="#">
+                      <h2 className="text-2xl font-bold hover:text-primary">
+                        Domestic shipping
+                      </h2>
+                    </Link>
+                    <p className="mt-3">
+                      Manage all channels in a single view and reach nationwide
+                      efficiently with AI-based courier selection
+                    </p>
+                    <Link
+                      href="#"
+                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
+                    >
+                      <span>See Detail</span>
+                      <span className="icon-arrow-up-right font-bold"></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="service-block relative mb-8">
+              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
+                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
+                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
+                    <Link href="#">
+                      <Image
+                        src={B2b}
+                        alt="services"
+                        className="transition-all ease-linear duration-300 grayscale"
+                      />
+                    </Link>
+                  </figure>
+                </div>
+                <div className="service-contentbox mx-4">
+                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
+                    <Link href="#">
+                      <h2 className="text-2xl font-bold hover:text-primary">
+                        B2B shipping
+                      </h2>
+                    </Link>
+                    <p className="mt-3">
+                      Lower your B2B and cargo shipping costs by upto 40%
+                    </p>
+                    <Link
+                      href="#"
+                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
+                    >
+                      <span>See Detail</span>
+                      <span className="icon-arrow-up-right font-bold"></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="service-block relative mb-8">
+              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
+                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
+                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
+                    <Link href="#">
+                      <Image
+                        src={LocalDelivery}
+                        alt="services"
+                        className="transition-all ease-linear duration-300 grayscale"
+                      />
+                    </Link>
+                  </figure>
+                </div>
+                <div className="service-contentbox mx-4">
+                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
+                    <Link href="#">
+                      <h2 className="text-2xl font-bold hover:text-primary">
+                        Hyperlocal delivery
+                      </h2>
+                    </Link>
+                    <p className="mt-3">
+                      Make intra-city deliveries in hours with our experienced
+                      courier partners
+                    </p>
+                    <Link
+                      href="#"
+                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
+                    >
+                      <span>See Detail</span>
+                      <span className="icon-arrow-up-right font-bold"></span>
                     </Link>
                   </div>
                 </div>

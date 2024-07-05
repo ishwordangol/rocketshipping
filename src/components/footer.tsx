@@ -110,10 +110,10 @@ const Footer = () => {
                         <span className="icon-phone text-white text-base"></span>
                       </div>
                       <Link
-                        href="tel:+61411205026"
+                        href="tel:+977-9851053926"
                         className="text-gray-400 hover:text-primary transition ease-linear duration-200 delay-50"
                       >
-                        (+61) 411 205 026
+                        (+977) 9851053926
                       </Link>
                     </div>
                   </div>
