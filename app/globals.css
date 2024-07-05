@@ -116,7 +116,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 50;
 }
 
 /* slick slider */
@@ -168,4 +168,19 @@ h6 {
   opacity: 0;
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
+}
+
+/* pricing */
+
+.pricingWrapper:after {
+  position: absolute;
+  background: url("/assets/images/pricing-bg.png");
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  pointer-events: none;
 }

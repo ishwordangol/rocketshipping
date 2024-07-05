@@ -490,6 +490,126 @@ const page = () => {
           </div>
         </div>
       </section>
+      <section className="relative bg-black pricingWrapper py-32">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-white text-base uppercase font-bold text-primary">
+              Price Plan
+            </h3>
+            <h2 className="text-white my-4 font-bold text-5xl leading-tight text-black">
+              AFFORDABLE PLANS
+            </h2>
+          </div>
+          <div className="mt-12 grid grid-cols-3 gap-8">
+            <div className="p-16 rounded-lg bg-white">
+              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
+                <h2 className="text-4xl font-bold">
+                  Rs 5000<sub className="text-base">/Month</sub>
+                </h2>
+                <p>*Rates are subject to change</p>
+                <h3 className="text-2xl font-bold text-primary">Lite Plan</h3>
+              </div>
+              <button type="button" className="mt-4 mb-8 RSbutton w-full">
+                Choose Plan
+              </button>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-16 rounded-lg bg-white">
+              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
+                <h2 className="text-4xl font-bold">
+                  Rs 10,000<sub className="text-base">/Month</sub>
+                </h2>
+                <p>*Rates are subject to change</p>
+                <h3 className="text-2xl font-bold text-primary">
+                  Professional Plan
+                </h3>
+              </div>
+              <button type="button" className="mt-4 mb-8 RSbutton w-full">
+                Choose Plan
+              </button>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-16 rounded-lg bg-white">
+              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
+                <h2 className="text-4xl font-bold">
+                  Rs 20,000<sub className="text-base">/Month</sub>
+                </h2>
+                <p>*Rates are subject to change</p>
+                <h3 className="text-2xl font-bold text-primary">
+                  Enterprise Plan
+                </h3>
+              </div>
+              <button type="button" className="mt-4 mb-8 RSbutton w-full">
+                Choose Plan
+              </button>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="icon-check text-secondary text-lg font-bold"></span>
+                  <span>24/7 Free Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

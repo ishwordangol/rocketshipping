@@ -42,7 +42,7 @@ const Header = () => {
   }, [scrollPosition, pinStart]);
   return (
     <Headroom
-      className="header"
+      className="header z-50"
       onPin={handlePin}
       onUnpin={handleUnpin}
       upTolerance={5}
