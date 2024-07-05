@@ -10,6 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Banner from "@/public/assets/images/banners/banner.jpeg";
 import About1 from "@/public/assets/images/about1.jpg";
 import About2 from "@/public/assets/images/about2.jpg";
+import Bhotahity from "@/public/assets/images/Clients/bhotahity.png";
+import Byaparkhata from "@/public/assets/images/Clients/byapar-khata.png";
+import Gadikoparts from "@/public/assets/images/Clients/gadiko-parts-logo.png";
+import Huawei from "@/public/assets/images/Clients/huawei.png";
+import Ncell from "@/public/assets/images/Clients/ncell.png";
+import Ntc from "@/public/assets/images/Clients/ntc.png";
 
 const page = () => {
   const herosettings = {
@@ -58,12 +64,12 @@ const page = () => {
   };
 
   const clientimageList = [
-    "/assets/images/Clients/bhotahity.png",
-    "/assets/images/Clients/byapar-khata.png",
-    "/assets/images/Clients/gadiko-parts-logo.png",
-    "/assets/images/Clients/huawei.png",
-    "/assets/images/Clients/ncell.png",
-    "/assets/images/Clients/ntc.png",
+    Bhotahity,
+    Byaparkhata,
+    Gadikoparts,
+    Huawei,
+    Ncell,
+    Ntc,
   ];
 
   const about = {
@@ -122,7 +128,10 @@ const page = () => {
             preload="none"
             className="w-full h-dvh object-cover"
           >
-            <source src="/assets/images/rocket-shipping.mp4" type="video/mp4" />
+            <source
+              src="./../assets/images/rocket-shipping.mp4"
+              type="video/mp4"
+            />
           </video>
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
           <div className="w-full absolute top-1/2 -translate-y-1/2">
