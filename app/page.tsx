@@ -129,7 +129,7 @@ const page = () => {
             className="w-full h-dvh object-cover"
           >
             <source
-              src="./../assets/images/rocket-shipping.mp4"
+              src="./assets/images/rocket-shipping.mp4"
               type="video/mp4"
             />
           </video>
