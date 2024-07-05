@@ -25,6 +25,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-parcel-delivery:before {
+  content: "\ea1a";
+}
+.icon-parcel-in-transit:before {
+  content: "\ea1b";
+}
+.icon-parcel-loading:before {
+  content: "\ea1c";
+}
+.icon-register:before {
+  content: "\ea1d";
+}
+
 .icon-activity:before {
   content: "\e900";
 }

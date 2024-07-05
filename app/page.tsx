@@ -19,6 +19,7 @@ import Ntc from "@/public/assets/images/Clients/ntc.png";
 import DomesticShopping from "@/public/assets/images/services/domestic-shopping.jpg";
 import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
 import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
+import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
 
 const page = () => {
   const herosettings = {
@@ -115,6 +116,7 @@ const page = () => {
       },
     ],
   };
+
   return (
     <>
       <Header />
@@ -149,10 +151,7 @@ const page = () => {
                 </p>
                 <div className="inline-block">
                   <Link href="#" className="mt-8 RSbutton">
-                    <span>All services</span>
-                    <span className="flex items-center justify-center w-3 h-3 rounded-full bg-white btnicon">
-                      <i className="icon-chevron-right text-primary text-sm font-bold"></i>
-                    </span>
+                    <span className="text-lg">All services</span>
                   </Link>
                 </div>
               </div>
@@ -323,8 +322,9 @@ const page = () => {
                       </h2>
                     </Link>
                     <p className="mt-3">
-                      Manage all channels in a single view and reach nationwide
-                      efficiently with AI-based courier selection
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Contrary to popular belief, Lorem
+                      Ipsum is not simply random text.
                     </p>
                     <Link
                       href="#"
@@ -358,7 +358,9 @@ const page = () => {
                       </h2>
                     </Link>
                     <p className="mt-3">
-                      Lower your B2B and cargo shipping costs by upto 40%
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Contrary to popular belief, Lorem
+                      Ipsum is not simply random text.
                     </p>
                     <Link
                       href="#"
@@ -392,8 +394,9 @@ const page = () => {
                       </h2>
                     </Link>
                     <p className="mt-3">
-                      Make intra-city deliveries in hours with our experienced
-                      courier partners
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Contrary to popular belief, Lorem
+                      Ipsum is not simply random text.
                     </p>
                     <Link
                       href="#"
@@ -405,6 +408,84 @@ const page = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="how-we-workWrapper py-32 bg-gray-50">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-base uppercase font-bold text-primary">
+              How It Works
+            </h3>
+            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+              How We Deliver Your Parcel
+            </h2>
+          </div>
+          <div className="mt-12 grid grid-cols-3 gap-8">
+            <div className="relative">
+              <div className="relative z-20 grid grid-cols-1 gap-8">
+                <div className="p-8 rounded-lg bg-white flex gap-4">
+                  <div className="flex items-center justify-center w-20 h-20 border-2 border-primary rounded-full">
+                    <span className="icon-register text-3xl text-primary font-semibold"></span>
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    <h2 className="font-bold text-3xl text-primary">01</h2>
+                    <h3 className="font-bold text-2xl">Parcel Register</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="p-8 rounded-lg bg-white flex gap-4">
+                  <div className="flex items-center justify-center w-20 h-20 border-2 border-primary rounded-full">
+                    <span className="icon-parcel-loading text-3xl text-primary font-semibold"></span>
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    <h2 className="font-bold text-3xl text-primary">02</h2>
+                    <h3 className="font-bold text-2xl">Parcel Loading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="p-8 rounded-lg bg-white flex gap-4">
+                  <div className="flex items-center justify-center w-20 h-20 border-2 border-primary rounded-full">
+                    <span className="icon-parcel-in-transit text-3xl text-primary font-semibold"></span>
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    <h2 className="font-bold text-3xl text-primary">03</h2>
+                    <h3 className="font-bold text-2xl">Parcel In-Transit</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className="p-8 rounded-lg bg-white flex gap-4">
+                  <div className="flex items-center justify-center w-20 h-20 border-2 border-primary rounded-full">
+                    <span className="icon-parcel-delivery text-3xl text-primary font-semibold"></span>
+                  </div>
+                  <div className="flex-1 space-y-1">
+                    <h2 className="font-bold text-3xl text-primary">04</h2>
+                    <h3 className="font-bold text-2xl">Parcel Delivery</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="z-10 absolute left-1/2 -translate-1/2 w-0 border-2 border-dashed h-full border-secondary top-0 bottom-0"></div>
+            </div>
+            <div className="flex justify-center items-center rounded-lg p-8 bg-white col-span-2">
+              <Image
+                src={ShippingPlaces}
+                alt="Shipping Places"
+                className="w-full rounded-lg"
+              />
             </div>
           </div>
         </div>
