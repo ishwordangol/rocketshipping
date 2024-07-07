@@ -20,6 +20,7 @@ import DomesticShopping from "@/public/assets/images/services/domestic-shopping.
 import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
 import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
+import Testimonial from "@/src/components/testimonial";
 
 const page = () => {
   const herosettings = {
@@ -309,7 +310,7 @@ const page = () => {
                       <Image
                         src={DomesticShopping}
                         alt="services"
-                        className="transition-all ease-linear duration-300 grayscale"
+                        className="transition-all ease-linear duration-300"
                       />
                     </Link>
                   </figure>
@@ -345,7 +346,7 @@ const page = () => {
                       <Image
                         src={B2b}
                         alt="services"
-                        className="transition-all ease-linear duration-300 grayscale"
+                        className="transition-all ease-linear duration-300"
                       />
                     </Link>
                   </figure>
@@ -381,7 +382,7 @@ const page = () => {
                       <Image
                         src={LocalDelivery}
                         alt="services"
-                        className="transition-all ease-linear duration-300 grayscale"
+                        className="transition-all ease-linear duration-300"
                       />
                     </Link>
                   </figure>
@@ -610,6 +611,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <Testimonial />
       <Footer />
     </>
   );

@@ -73,16 +73,6 @@ const Header = () => {
                       isPinned ? "text-black" : "text-white"
                     }`}
                   >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className={`font-semibold text-lg ${
-                      isPinned ? "text-black" : "text-white"
-                    }`}
-                  >
                     About Us
                   </Link>
                 </li>
@@ -94,6 +84,16 @@ const Header = () => {
                     }`}
                   >
                     Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className={`font-semibold text-lg ${
+                      isPinned ? "text-black" : "text-white"
+                    }`}
+                  >
+                    Price
                   </Link>
                 </li>
                 <li>

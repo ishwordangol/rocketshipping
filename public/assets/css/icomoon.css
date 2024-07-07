@@ -25,6 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star1:before {
+  content: "\f005";
+}
+.icon-star-half:before {
+  content: "\f089";
+}
+.icon-quote-left:before {
+  content: "\f10d";
+}
+
 .icon-parcel-delivery:before {
   content: "\ea1a";
 }
