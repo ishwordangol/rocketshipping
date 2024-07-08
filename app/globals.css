@@ -132,7 +132,7 @@ h6 {
 
 /* services */
 
-.image-box,
+.servicesWrapper .image-box,
 .service-contentbox {
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -142,7 +142,8 @@ h6 {
   border-color: #ed1c24;
 }
 
-.servicesWrapper .servicelist:hover .image-box img {
+.servicesWrapper .servicelist:hover .image-box img,
+.blogSlider .bloglist:hover .image-box img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -190,40 +191,99 @@ h6 {
   color: #00a651;
 }
 
-.testimonialSlider .slick-slide {
+.sliderWrapper .slick-slide {
   margin: 0 8px;
 }
 
-.testimonialSlider .slick-list {
+.sliderWrapper .slick-list {
   margin: 0 -8px;
 }
 
-.testimonialSlider .slick-track {
+.sliderWrapper .slick-track {
   display: flex;
+  align-items: center;
 }
 
-.testimonialSlider .slick-dots {
+.sliderWrapper .slick-dots {
   bottom: -60px;
 }
 
-.testimonialSlider .slick-dots li {
+.sliderWrapper .slick-dots li {
   margin: 0 3px;
 }
 
-.testimonialSlider .slick-dots li,
-.testimonialSlider .slick-dots li button {
+.sliderWrapper .slick-dots li,
+.sliderWrapper .slick-dots li button {
   width: 10px;
   height: 10px;
 }
 
-.testimonialSlider .slick-dots li.slick-active button:before {
+.sliderWrapper .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #00a651;
 }
 
-.testimonialSlider .slick-dots li button:before {
+.sliderWrapper .slick-dots li button:before {
   font-size: 10px;
   line-height: 10px;
   width: 10px;
   height: 10px;
+}
+
+.sliderWrapper .slick-current + .slick-slide .slidebox {
+  background: #fff;
+  border: 1px solid #00a651;
+}
+
+.sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top {
+  height: 48px;
+}
+
+.sliderWrapper .slick-current + .slick-slide .slidebox .icon-quote-left {
+  font-size: 48px;
+}
+
+.sliderWrapper
+  .slick-current
+  + .slick-slide
+  .slidebox
+  .userrating
+  .starWrapper
+  > .icon-star1 {
+  font-size: 20px;
+}
+
+.sliderWrapper .slick-current + .slick-slide .slidebox > p {
+  font-size: 20px;
+}
+
+.sliderWrapper
+  .slick-current
+  + .slick-slide
+  .slidebox
+  .testimonial-bottom
+  > img {
+  width: 100px;
+  height: 100px;
+}
+
+.sliderWrapper
+  .slick-current
+  + .slick-slide
+  .slidebox
+  .testimonial-bottom
+  .userinfo
+  h4 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.sliderWrapper
+  .slick-current
+  + .slick-slide
+  .slidebox
+  .testimonial-bottom
+  .userinfo
+  span {
+  font-size: 20px;
 }

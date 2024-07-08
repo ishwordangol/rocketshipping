@@ -21,6 +21,7 @@ import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
 import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
 import Testimonial from "@/src/components/testimonial";
+import Blog from "@/src/components/blog";
 
 const page = () => {
   const herosettings = {
@@ -52,7 +53,7 @@ const page = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -160,10 +161,10 @@ const page = () => {
           </div>
         </div>
       </Slider>
-      <section className="clientWrapper py-24 border-b border-gray-200">
+      <section className="clientWrapper py-12 md:py-16 lg:py-24 border-b border-gray-200">
         <div className="container">
-          <div className="flex justify-center titleWrapper mb-16">
-            <h2 className="font-bold text-3xl">
+          <div className="flex justify-center titleWrapper mb-8 lg:mb-16">
+            <h2 className="font-bold text-2xl lg:text-3xl">
               Trusted by companies, big or not-so-big:
             </h2>
           </div>
@@ -186,20 +187,20 @@ const page = () => {
           </Slider>
         </div>
       </section>
-      <section className="aboutWrapper py-32">
+      <section className="aboutWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             <Image
               src={About1}
               alt="About"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover lg:hidden xl:block"
             />
-            <div className="col-span-2">
-              <div className="px-8">
+            <div className="col-span-1 lg:col-span-2">
+              <div className="px-0 xl:px-8">
                 <h3 className="text-base uppercase font-bold text-primary">
                   {about.title}
                 </h3>
-                <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+                <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
                   {about.mainTitle}
                 </h2>
               </div>
@@ -207,9 +208,9 @@ const page = () => {
                 <Image
                   src={About2}
                   alt="About"
-                  className="w-76 h-auto rounded-lg"
+                  className="hidden sm:block w-64 2xl:w-76 h-full object-cover"
                 />
-                <div className="flex-1 py-4">
+                <div className="w-full sm:w-auto flex-1 lg:py-0 2xl:py-4 flex flex-col">
                   <div className="leading-normal">
                     <p className="mb-3">
                       Welcome to Rocket Shipping, a premier technology solutions
@@ -219,38 +220,35 @@ const page = () => {
                       packages reach their destination swiftly and securely.
                       Trust us to deliver excellence with every shipment.
                     </p>
-                    <p className="mb-3">
+                    <p className="mb-3 block sm:hidden lg:block">
                       Founded on the principles of efficiency and customer
                       satisfaction, Rocket Shipping has built a reputation for
                       reliability and excellence. Our team of experts works
                       tirelessly to streamline logistics and enhance your
                       shipping experience. Whether you are a small business or a
                       large enterprise, we offer tailored solutions to meet your
-                      unique needs and exceed your expectations. With Rocket
-                      Shipping, you can count on a partner that is always ahead
-                      of the curve in delivering your goods.
+                      unique needs and exceed your expectations.
                     </p>
                   </div>
-
-                  <div className="grid grid-cols-2 gap-4 mt-8">
-                    {about.features.map((item, index) => {
-                      return (
-                        <div key={index} className="flex items-center gap-4">
-                          <span className="bg-secondary text-white w-8 h-8 flex items-center justify-center rounded-full">
-                            <i className="icon-check"></i>
-                          </span>
-                          <h2 className="flex-1 text-lg font-bold">
-                            {item.title}
-                          </h2>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="mt-4 inline-block">
-                    <Link href="#" className="mt-8 RSbutton">
-                      <span>More About Us</span>
-                      <i className="icon-chevron-right text-white text-xl font-bold"></i>
-                    </Link>
+                  <div className="mt-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                      {about.features.map((item, index) => {
+                        return (
+                          <div key={index} className="flex items-center gap-4">
+                            <span className="bg-secondary text-white w-6 h-6 flex items-center justify-center rounded-full">
+                              <i className="icon-check"></i>
+                            </span>
+                            <h2 className="flex-1 font-bold">{item.title}</h2>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-4 inline-block">
+                      <Link href="#" className="mt-8 RSbutton">
+                        <span>More About Us</span>
+                        <i className="icon-chevron-right text-white text-xl font-bold"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -258,25 +256,25 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="countWrapper py-24 bg-primary">
+      <section className="countWrapper py-12 md:py-16 lg:py-24 bg-primary">
         <div className="container">
           <div className="flex justify-center">
-            <div className="2xl:max-w-7xl flex items-center justify-between gap-32">
-              <div>
+            <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-8 lg:gap-16 2xl:gap-32">
+              <div className="w-full sm:w-auto">
                 <h4 className="text-white">Fun facts about Rocket Shipping </h4>
-                <h2 className="mt-4 text-white text-5xl font-bold">
+                <h2 className="mt-4 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   Numbers speak
                 </h2>
               </div>
-              <div>
-                <div className="flex items-center text-center gap-16">
+              <div className="w-full sm:w-auto">
+                <div className="flex items-center sm:text-center gap-4 lg:gap-8 2xl:gap-16">
                   {about.otherContent.map((item, index) => {
                     return (
                       <div key={index}>
                         <span
-                          className={`inline-block text-4xl text-white ${item.icon}`}
+                          className={`inline-block text-2xl md:text-3xl lg:text-4xl text-white ${item.icon}`}
                         ></span>
-                        <h2 className="mt-3 text-white text-5xl font-bold">
+                        <h2 className="mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                           {item.count} {item.tag}
                         </h2>
                         <p className="text-white mt-3 font-bold">
@@ -291,7 +289,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="servicesWrapper py-32">
+      <section className="servicesWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
@@ -611,7 +609,32 @@ const page = () => {
           </div>
         </div>
       </section>
-      <Testimonial />
+      <section className="testimonialWrapper py-32 bg-gray-50">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-base uppercase font-bold text-primary">
+              User Review
+            </h3>
+            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+              What Users say about Rocket Shipping
+            </h2>
+          </div>
+          <Testimonial />
+        </div>
+      </section>
+      <section className="blogWrapper py-32 ">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-base uppercase font-bold text-primary">
+              Latest Blog
+            </h3>
+            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+              Our Latest News Blog and Articles
+            </h2>
+          </div>
+          <Blog />
+        </div>
+      </section>
       <Footer />
     </>
   );
