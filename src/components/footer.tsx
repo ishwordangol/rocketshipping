@@ -6,10 +6,10 @@ import LogoWhite from "@/public/assets/images/rocketshipping-logo-white.svg";
 const Footer = () => {
   return (
     <footer className="bg-footer">
-      <section className="py-24">
+      <section className="py-12 md:py-16 lg:py-24">
         <div className="container">
-          <div className="grid grid-cols-7 gap-16">
-            <div className="col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-16">
+            <div className="lg:col-span-2">
               <Link href="#">
                 <Image src={LogoWhite} width={200} height={200} alt="Logo" />
               </Link>
@@ -37,9 +37,9 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-span-3 grid grid-cols-2">
+            <div className="lg:col-span-3 grid sm:grid-cols-2 gap-8 sm:gap-0">
               <div>
-                <h3 className="mt-4 font-bold text-2xl text-white">
+                <h3 className="mt-4 font-bold text-xl lg:text-2xl text-white">
                   Quick Links
                 </h3>
                 <ul className="mt-8 flex flex-col space-y-4">
@@ -86,7 +86,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="mt-4 font-bold text-2xl text-white">
+                <h3 className="mt-4 font-bold text-xl lg:text-2xl text-white">
                   Contact Us
                 </h3>
                 <div className="mt-8 space-y-4">
@@ -136,8 +136,10 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2">
-              <h3 className="mt-4 font-bold text-2xl text-white">Newsletter</h3>
+            <div className="lg:col-span-2">
+              <h3 className="mt-4 font-bold text-xl lg:text-2xl text-white">
+                Newsletter
+              </h3>
               <div className="mt-8">
                 <p className="text-gray-400">
                   Dont’t miss any updates of our new templates and extensions
@@ -159,11 +161,11 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <section className="py-8 border-t border-gray-800">
+      <section className="py-4 sm:py-8 border-t border-gray-800">
         <div className="container">
-          <div className="flex flex-wrap gap-1 justify-between text-gray-400 text-sm lg:text-base">
+          <div className="flex flex-wrap gap-2 sm:gap-1 justify-center sm:justify-between text-gray-400 text-sm lg:text-base">
             <p>All rights reserved ©️ Rocket Shipping</p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 order-first sm:order-last">
               <Link
                 href="#"
                 className="text-gray-400 hover:text-primary transition ease-linear duration-200 delay-50"

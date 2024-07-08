@@ -18,21 +18,24 @@ const testimonialsettings = {
     {
       breakpoint: 1024,
       settings: {
+        dots: false,
         slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        dots: false,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
+        dots: false,
+        slidesToShow: 1,
         slidesToScroll: 1,
       },
     },
@@ -43,7 +46,7 @@ const Testimonial = () => {
   return (
     <TestimonialSlider
       {...testimonialsettings}
-      className="mt-12 sliderWrapper testimonialSlider"
+      className="mt-8 lg:mt-12 sliderWrapper testimonialSlider"
     >
       <div className="slidebox p-9 bg-gray-100 rounded-lg">
         <div className="testimonial-top relative h-9">

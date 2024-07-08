@@ -141,7 +141,7 @@ const page = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
           <div className="w-full absolute top-1/2 -translate-y-1/2">
             <div className="container">
-              <div className="px-16 max-w-5xl">
+              <div className="hidden md:block px-16 max-w-5xl">
                 <h1 className="text-7xl text-white font-bold leading-tight">
                   Fastest Shipping Products in Nepal
                 </h1>
@@ -277,7 +277,7 @@ const page = () => {
                         <h2 className="mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                           {item.count} {item.tag}
                         </h2>
-                        <p className="text-sm sm:text-base text-white mt-3 font-bold">
+                        <p className="text-base text-white mt-3 font-bold">
                           {item.description}
                         </p>
                       </div>
@@ -615,26 +615,26 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="testimonialWrapper py-32 bg-gray-50">
+      <section className="testimonialWrapper py-12 sm:py-16 md:py-24 lg:py-32 bg-gray-50">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
               User Review
             </h3>
-            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
               What Users say about Rocket Shipping
             </h2>
           </div>
           <Testimonial />
         </div>
       </section>
-      <section className="blogWrapper py-32 ">
+      <section className="blogWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
               Latest Blog
             </h3>
-            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
               Our Latest News Blog and Articles
             </h2>
           </div>

@@ -230,60 +230,67 @@ h6 {
   height: 10px;
 }
 
-.sliderWrapper .slick-current + .slick-slide .slidebox {
-  background: #fff;
-  border: 1px solid #00a651;
+@media only screen and (min-width: 1024px) {
+  .sliderWrapper .slick-current + .slick-slide .slidebox {
+    background: #fff;
+    border: 1px solid #00a651;
+  }
+  .sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top {
+    height: 48px;
+  }
+
+  .sliderWrapper .slick-current + .slick-slide .slidebox .icon-quote-left {
+    font-size: 48px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .userrating
+    .starWrapper
+    > .icon-star1 {
+    font-size: 20px;
+  }
+
+  .sliderWrapper .slick-current + .slick-slide .slidebox > p {
+    font-size: 20px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    .userinfo
+    h4 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    .userinfo
+    span {
+    font-size: 20px;
+  }
 }
 
-.sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top {
-  height: 48px;
-}
-
-.sliderWrapper .slick-current + .slick-slide .slidebox .icon-quote-left {
-  font-size: 48px;
-}
-
-.sliderWrapper
-  .slick-current
-  + .slick-slide
-  .slidebox
-  .userrating
-  .starWrapper
-  > .icon-star1 {
-  font-size: 20px;
-}
-
-.sliderWrapper .slick-current + .slick-slide .slidebox > p {
-  font-size: 20px;
-}
-
-.sliderWrapper
-  .slick-current
-  + .slick-slide
-  .slidebox
-  .testimonial-bottom
-  > img {
-  width: 100px;
-  height: 100px;
-}
-
-.sliderWrapper
-  .slick-current
-  + .slick-slide
-  .slidebox
-  .testimonial-bottom
-  .userinfo
-  h4 {
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.sliderWrapper
-  .slick-current
-  + .slick-slide
-  .slidebox
-  .testimonial-bottom
-  .userinfo
-  span {
-  font-size: 20px;
+@media only screen and (max-width: 640px) {
+  .headerRight > a.RSbutton {
+    display: none;
+  }
 }
