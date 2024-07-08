@@ -259,15 +259,15 @@ const page = () => {
       <section className="countWrapper py-12 md:py-16 lg:py-24 bg-primary">
         <div className="container">
           <div className="flex justify-center">
-            <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-8 lg:gap-16 2xl:gap-32">
+            <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 lg:gap-16 2xl:gap-32">
               <div className="w-full sm:w-auto">
                 <h4 className="text-white">Fun facts about Rocket Shipping </h4>
-                <h2 className="mt-4 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                <h2 className="mt-0 sm:mt-4 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                   Numbers speak
                 </h2>
               </div>
               <div className="w-full sm:w-auto">
-                <div className="flex items-center sm:text-center gap-4 lg:gap-8 2xl:gap-16">
+                <div className="flex justify-between sm:justify-normal items-center sm:text-center gap-2 sm:gap-4 lg:gap-8 2xl:gap-16">
                   {about.otherContent.map((item, index) => {
                     return (
                       <div key={index}>
@@ -277,7 +277,7 @@ const page = () => {
                         <h2 className="mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                           {item.count} {item.tag}
                         </h2>
-                        <p className="text-white mt-3 font-bold">
+                        <p className="text-sm sm:text-base text-white mt-3 font-bold">
                           {item.description}
                         </p>
                       </div>
@@ -295,12 +295,12 @@ const page = () => {
             <h3 className="text-base uppercase font-bold text-primary">
               Our Services
             </h3>
-            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
               WHAT WE ARE OFFERING
             </h2>
           </div>
-          <div className="mt-12 servicesWrapper grid grid-cols-3 gap-8">
-            <div className="service-block relative mb-8">
+          <div className="mt-8 lg:mt-12 servicesWrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="service-block relative">
               <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
                 <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
                   <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
@@ -336,7 +336,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="service-block relative mb-8">
+            <div className="service-block relative">
               <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
                 <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
                   <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
@@ -372,7 +372,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="service-block relative mb-8">
+            <div className="service-block relative">
               <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
                 <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
                   <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
@@ -411,19 +411,19 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="how-we-workWrapper py-32 bg-gray-50">
+      <section className="how-we-workWrapper py-12 sm:py-16 md:py-24 lg:py-32 bg-gray-50">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
               How It Works
             </h3>
-            <h2 className="my-4 font-bold text-5xl leading-tight text-black">
+            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
               How We Deliver Your Parcel
             </h2>
           </div>
-          <div className="mt-12 grid grid-cols-3 gap-8">
+          <div className="mt-8 lg:mt-12 grid grid-cols-1 xl:grid-cols-3 gap-8">
             <div className="relative">
-              <div className="relative z-20 grid grid-cols-1 gap-8">
+              <div className="relative z-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
                 <div className="p-8 rounded-lg bg-white flex gap-4">
                   <div className="flex items-center justify-center w-20 h-20 border-2 border-primary rounded-full">
                     <span className="icon-register text-3xl text-primary font-semibold"></span>
@@ -477,9 +477,9 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div className="z-10 absolute left-1/2 -translate-1/2 w-0 border-2 border-dashed h-full border-secondary top-0 bottom-0"></div>
+              <div className="block md:hidden xl:block z-10 absolute left-1/2 -translate-1/2 w-0 border-2 border-dashed h-full border-secondary top-0 bottom-0"></div>
             </div>
-            <div className="flex justify-center items-center rounded-lg p-8 bg-white col-span-2">
+            <div className="flex justify-center items-center rounded-lg p-8 bg-white xl:col-span-2">
               <Image
                 src={ShippingPlaces}
                 alt="Shipping Places"
@@ -489,23 +489,25 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="relative bg-black pricingWrapper py-32">
+      <section className="relative bg-black pricingWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
-            <h3 className="text-white text-base uppercase font-bold text-primary">
+            <h3 className="text-white text-base uppercase font-bold">
               Price Plan
             </h3>
-            <h2 className="text-white my-4 font-bold text-5xl leading-tight text-black">
+            <h2 className="text-white my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
               AFFORDABLE PLANS
             </h2>
           </div>
-          <div className="mt-12 grid grid-cols-3 gap-8">
-            <div className="p-16 rounded-lg bg-white">
+          <div className="mt-8 lg:mt-12 grid md:grid-cols-3 gap-4 lg:gap-8">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 5000<sub className="text-base">/Month</sub>
                 </h2>
-                <p>*Rates are subject to change</p>
+                <p className="text-sm lg:text-base">
+                  *Rates are subject to change
+                </p>
                 <h3 className="text-2xl font-bold text-primary">Lite Plan</h3>
               </div>
               <button type="button" className="mt-4 mb-8 RSbutton w-full">
@@ -534,12 +536,14 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="p-16 rounded-lg bg-white">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 10,000<sub className="text-base">/Month</sub>
                 </h2>
-                <p>*Rates are subject to change</p>
+                <p className="text-sm lg:text-base">
+                  *Rates are subject to change
+                </p>
                 <h3 className="text-2xl font-bold text-primary">
                   Professional Plan
                 </h3>
@@ -570,12 +574,14 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="p-16 rounded-lg bg-white">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 20,000<sub className="text-base">/Month</sub>
                 </h2>
-                <p>*Rates are subject to change</p>
+                <p className="text-sm lg:text-base">
+                  *Rates are subject to change
+                </p>
                 <h3 className="text-2xl font-bold text-primary">
                   Enterprise Plan
                 </h3>
