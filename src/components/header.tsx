@@ -110,7 +110,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="flex items-center space-x-2 md:space-x-4 headerRight">
+            <div className="flex items-center space-x-4 sm:space-x-2 md:space-x-4 headerRight">
               <Link href="#" className="z-10 RSbutton">
                 Track Your Order
               </Link>
