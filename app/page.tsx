@@ -161,7 +161,7 @@ const page = () => {
           </div>
         </div>
       </Slider>
-      <section className="clientWrapper py-12 md:py-16 lg:py-24 border-b border-gray-200">
+      <section className="clientWrapper py-12 md:py-16 lg:py-24 border-b border-gray-200 overflow-hidden">
         <div className="container">
           <div className="flex justify-center titleWrapper mb-8 lg:mb-16">
             <h2 className="font-bold text-2xl lg:text-3xl">
