@@ -78,7 +78,7 @@ const Header = () => {
       upTolerance={5}
     >
       <header
-        className={`py-4 ${
+        className={`py-2 sm:py-4 ${
           isPinned ? "bg-white border-b border-gray-200" : "bg-transparent"
         }`}
       >
