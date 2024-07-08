@@ -142,10 +142,10 @@ const page = () => {
           <div className="w-full absolute top-1/2 -translate-y-1/2">
             <div className="container">
               <div className="hidden md:block px-16 max-w-5xl">
-                <h1 className="text-7xl text-white font-bold leading-tight">
+                <h1 className="text-7xl text-white font-bold leading-tight tracking-wider">
                   Fastest Shipping Products in Nepal
                 </h1>
-                <p className="mt-8 text-white leading-normal text-xl">
+                <p className="mt-8 text-white leading-normal text-xl tracking-wider">
                   Experience the Fastest Shipping for Your Products in Nepal! At
                   Rocket Shipping, we guarantee swift and reliable deliveries,
                   ensuring your packages reach their destination on time, every
@@ -157,6 +157,9 @@ const page = () => {
                   </Link>
                 </div>
               </div>
+              {/* <Link href="#" className="block md:hidden RSbutton">
+                Track Your Order
+              </Link> */}
             </div>
           </div>
         </div>
