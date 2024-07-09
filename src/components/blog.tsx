@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Blog1 from "@/public/assets/images/blog/blog1.jpg";
 import Blog2 from "@/public/assets/images/blog/blog2.jpg";
 import Blog3 from "@/public/assets/images/blog/blog3.jpg";
+import Blog4 from "@/public/assets/images/blog/blog4.jpg";
 
 const blog = {
   blogcontent: [
@@ -30,6 +31,13 @@ const blog = {
       link: "/blog",
       name: "Ishwor Dangol",
       date: "7 july, 2024",
+    },
+    {
+      title: "Rocket Shipping's Guide to Seamless Delivery Tracking",
+      imgsource: Blog4,
+      link: "/blog",
+      name: "Devendra Jung",
+      date: "9 july, 2024",
     },
   ],
 };
