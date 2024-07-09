@@ -254,7 +254,7 @@ h6 {
 }
 
 @media only screen and (max-width: 640px) {
-  .headerRight > a.RSbutton {
+  .headerRight > .RSbutton {
     display: none;
   }
 }
