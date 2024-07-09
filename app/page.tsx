@@ -17,13 +17,21 @@ import Huawei from "@/public/assets/images/Clients/huawei.png";
 import Ncell from "@/public/assets/images/Clients/ncell.png";
 import Ntc from "@/public/assets/images/Clients/ntc.png";
 import DomesticShopping from "@/public/assets/images/services/domestic-shopping.jpg";
+import CountUp, { useCountUp } from "react-countup";
 import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
 import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
 import Testimonial from "@/src/components/testimonial";
 import Blog from "@/src/components/blog";
+import { count } from "console";
 
-const page = () => {
+const Page = () => {
+  useCountUp({
+    ref: "counter",
+    end: 300,
+    enableScrollSpy: true,
+    scrollSpyDelay: 1000,
+  });
   const herosettings = {
     arrows: false,
     dots: false,
@@ -86,19 +94,19 @@ const page = () => {
     otherContent: [
       {
         icon: "icon-truck",
-        count: "950",
+        count: 950,
         tag: "+",
         description: "Completed Delivery",
       },
       {
         icon: "icon-user-check",
-        count: "200",
+        count: 200,
         tag: "+",
         description: "Satisfied Clients",
       },
       {
         icon: "icon-users",
-        count: "100",
+        count: 100,
         tag: "+",
         description: "Qualified Members",
       },
@@ -277,9 +285,11 @@ const page = () => {
                         <span
                           className={`inline-block text-2xl md:text-3xl lg:text-4xl text-white ${item.icon}`}
                         ></span>
-                        <h2 className="mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-                          {item.count} {item.tag}
-                        </h2>
+
+                        <div className="flex items-cnter mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                          <CountUp end={item.count} enableScrollSpy />
+                          <span className="block">{item.tag}</span>
+                        </div>
                         <p className="text-base text-white mt-3 font-bold">
                           {item.description}
                         </p>
@@ -649,4 +659,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
