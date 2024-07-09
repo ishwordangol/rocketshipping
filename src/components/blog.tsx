@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Blog1 from "@/public/assets/images/blog/blog1.jpg";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Blog1 from "@/public/assets/images/blog/blog1.jpg";
+import Blog2 from "@/public/assets/images/blog/blog2.jpg";
+import Blog3 from "@/public/assets/images/blog/blog3.jpg";
 
 const blog = {
   blogcontent: [
@@ -17,14 +19,14 @@ const blog = {
     },
     {
       title: "Blasting Off: The Future of Rocket Shipping",
-      imgsource: Blog1,
+      imgsource: Blog2,
       link: "/blog",
       name: "Ishwor Dangol",
       date: "6 july, 2024",
     },
     {
       title: "Rocket Shipping 101: What You Need to Know",
-      imgsource: Blog1,
+      imgsource: Blog3,
       link: "/blog",
       name: "Ishwor Dangol",
       date: "7 july, 2024",
