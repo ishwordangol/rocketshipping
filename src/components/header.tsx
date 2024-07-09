@@ -69,7 +69,16 @@ const Header = () => {
     } else {
       setIsPinned(false);
     }
-  }, [scrollPosition, pinStart]);
+    if (nav) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [scrollPosition, pinStart, nav]);
   return (
     <>
       <Headroom
