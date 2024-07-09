@@ -94,22 +94,17 @@ h6 {
 /* header */
 
 .headroom-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
+  @apply fixed inset-x-0 top-0 z-50;
 }
 
 /* slick slider */
 
 .heroSlider .slick-prev {
-  left: 0;
-  z-index: 1;
+  @apply left-0 z-[1];
 }
 
 .heroSlider .slick-next {
-  right: 0;
+  @apply right-0;
 }
 
 /* services */
@@ -126,8 +121,7 @@ h6 {
 
 .servicesWrapper .servicelist:hover .image-box img,
 .blogSlider .bloglist:hover .image-box img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  @apply scale-110;
 }
 
 .overlay-anim {
@@ -215,12 +209,9 @@ h6 {
   .sliderWrapper .slick-current + .slick-slide .slidebox {
     @apply bg-white border border-secondary border-solid;
   }
-  .sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top {
-    height: 48px;
-  }
-
+  .sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top,
   .sliderWrapper .slick-current + .slick-slide .slidebox .icon-quote-left {
-    font-size: 48px;
+    @apply text-5xl;
   }
 
   .sliderWrapper
@@ -229,12 +220,16 @@ h6 {
     .slidebox
     .userrating
     .starWrapper
-    > .icon-star1 {
-    font-size: 20px;
-  }
-
-  .sliderWrapper .slick-current + .slick-slide .slidebox > p {
-    font-size: 20px;
+    > .icon-star1,
+  .sliderWrapper .slick-current + .slick-slide .slidebox > p,
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    .userinfo
+    span {
+    @apply text-xl;
   }
 
   .sliderWrapper
@@ -254,18 +249,7 @@ h6 {
     .testimonial-bottom
     .userinfo
     h4 {
-    font-size: 24px;
-    line-height: 1.5;
-  }
-
-  .sliderWrapper
-    .slick-current
-    + .slick-slide
-    .slidebox
-    .testimonial-bottom
-    .userinfo
-    span {
-    font-size: 20px;
+    @apply text-2xl leading-normal;
   }
 }
 
