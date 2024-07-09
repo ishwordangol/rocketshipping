@@ -179,7 +179,16 @@ const Header = () => {
         </div>
       )}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <TrackingOrder />
+        <div className="max-w-[600px]">
+          <h2 className="font-bold text-3xl leading-normal">Order Tracking</h2>
+          <p>
+            Provides specialized delivery services for packages, documents, and
+            other items from one location to another.
+          </p>
+          <div className="mt-8">
+            <TrackingOrder />
+          </div>
+        </div>
       </Modal>
     </>
   );
