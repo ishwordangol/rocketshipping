@@ -23,8 +23,7 @@
 }
 
 body {
-  color: #57534e;
-  font-size: 1rem;
+  @apply text-gray-500 text-base;
 }
 
 h1,
@@ -33,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  @apply text-black;
 }
 
 .shadow-custom {
@@ -43,28 +42,11 @@ h6 {
 /* button */
 
 .RSbutton {
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  padding-block: 0.75rem;
-  padding-inline: 1.5rem;
-  background-color: #ed1c24;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #ffff;
-  gap: 4px;
-  font-weight: bold;
-  outline: none;
-  overflow: hidden;
+  @apply relative py-3 px-6 bg-primary rounded-lg flex items-center justify-center cursor-pointer text-white gap-1 font-bold outline-none overflow-hidden transition-all duration-300 ease-in-out;
 }
 
 .btnicon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
+  @apply w-6 h-6 transition-all duration-300 ease-in-out;
 }
 
 .RSbutton:hover {
@@ -139,7 +121,7 @@ h6 {
 }
 
 .servicesWrapper .servicelist:hover .image-box {
-  border-color: #ed1c24;
+  @apply border-primary;
 }
 
 .servicesWrapper .servicelist:hover .image-box img,
@@ -188,7 +170,7 @@ h6 {
 /* testimonials */
 
 .starWrapper .star-filled {
-  color: #00a651;
+  @apply text-secondary;
 }
 
 .sliderWrapper .slick-slide {
@@ -219,8 +201,7 @@ h6 {
 }
 
 .sliderWrapper .slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #00a651;
+  @apply text-secondary opacity-100;
 }
 
 .sliderWrapper .slick-dots li button:before {
@@ -232,8 +213,7 @@ h6 {
 
 @media only screen and (min-width: 1024px) {
   .sliderWrapper .slick-current + .slick-slide .slidebox {
-    background: #fff;
-    border: 1px solid #00a651;
+    @apply bg-white border border-secondary border-solid;
   }
   .sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top {
     height: 48px;
