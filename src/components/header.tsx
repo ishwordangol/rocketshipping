@@ -6,6 +6,8 @@ import "@/public/assets/css/icomoon.css";
 import "@/app/globals.css";
 import LogoMain from "@/public/assets/images/logo.svg";
 import LogoWhite from "@/public/assets/images/rocketshipping-logo-white.svg";
+import Modal from "./modal";
+import TrackingOrder from "./trackingorder";
 const useScrollPosition = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -21,6 +23,7 @@ const useScrollPosition = () => {
   return scrollPosition;
 };
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPinned, setIsPinned] = useState(false);
   const scrollPosition = useScrollPosition();
   const pinStart = 120; // Scroll position at which the header should be pinned
@@ -62,6 +65,9 @@ const Header = () => {
       menuname: "Contact",
     },
   ];
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   useEffect(() => {
     // Set pinned state based on scroll position
     if (scrollPosition > pinStart) {
@@ -95,7 +101,7 @@ const Header = () => {
           <div className="container">
             <div className="flex flex-wrap justify-between items-center">
               <div className="headerLeft">
-                <Link href="#">
+                <Link href="/">
                   <Image
                     src={isPinned ? LogoMain : LogoWhite}
                     alt="Logo"
@@ -121,9 +127,9 @@ const Header = () => {
               </nav>
 
               <div className="flex items-center space-x-4 sm:space-x-2 md:space-x-4 headerRight">
-                <Link href="#" className="z-10 RSbutton">
+                <button onClick={openModal} className="z-10 RSbutton">
                   Track Your Order
-                </Link>
+                </button>
                 <button className="w-12 h-12 flex items-center justify-center bg-white rounded-full text-black">
                   <span className="icon-search text-xl"></span>
                 </button>
@@ -172,6 +178,9 @@ const Header = () => {
           </button>
         </div>
       )}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <TrackingOrder />
+      </Modal>
     </>
   );
 };
