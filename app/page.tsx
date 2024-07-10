@@ -502,8 +502,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="relative bg-black pricingWrapper py-12 sm:py-16 md:py-24 lg:py-32">
-        <div className="container">
+      <section className="relative pricingWrapper py-12 sm:py-16 md:py-24 lg:py-32">
+        <div className="relative container z-10">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-white text-base uppercase font-bold">
               Price Plan
@@ -513,7 +513,7 @@ const Page = () => {
             </h2>
           </div>
           <div className="mt-8 lg:mt-12 grid md:grid-cols-3 gap-4 lg:gap-8">
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 5000<sub className="text-base">/Month</sub>
@@ -549,7 +549,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 10,000<sub className="text-base">/Month</sub>
@@ -587,7 +587,7 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white">
+            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
               <div className="space-y-4 text-right pb-8 border-b border-gray-200">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Rs 20,000<sub className="text-base">/Month</sub>

@@ -150,13 +150,14 @@ h6 {
 
 .pricingWrapper:after {
   position: absolute;
-  background: url("/assets/images/pricing-bg.png");
+  background: #000000 url(/assets/images/pricing-bg.png);
+  background-position: center top;
   background-size: cover;
-  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50%;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   content: "";
   pointer-events: none;
 }
