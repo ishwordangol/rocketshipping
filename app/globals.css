@@ -109,12 +109,6 @@ h6 {
 
 /* services */
 
-.servicesWrapper .image-box,
-.service-contentbox {
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
 .servicesWrapper .servicelist:hover .image-box {
   @apply border-primary;
 }
@@ -161,6 +155,21 @@ h6 {
   content: "";
   pointer-events: none;
 }
+
+/* .pricingTable:after {
+  position: absolute;
+  background: url(/assets/images/pattern-price.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  content: "";
+  pointer-events: none;
+} */
 
 /* testimonials */
 
@@ -251,6 +260,12 @@ h6 {
     .userinfo
     h4 {
     @apply text-2xl leading-normal;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sliderWrapper .slick-current {
+    @apply -ml-12;
   }
 }
 

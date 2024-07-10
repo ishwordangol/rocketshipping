@@ -27,14 +27,8 @@ const testimonialsettings = {
       breakpoint: 768,
       settings: {
         dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        dots: false,
+        centerMode: true,
+        centerPadding: "48px",
         slidesToShow: 1,
         slidesToScroll: 1,
       },

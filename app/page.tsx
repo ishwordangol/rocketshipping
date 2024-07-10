@@ -16,22 +16,14 @@ import Gadikoparts from "@/public/assets/images/Clients/gadiko-parts-logo.png";
 import Huawei from "@/public/assets/images/Clients/huawei.png";
 import Ncell from "@/public/assets/images/Clients/ncell.png";
 import Ntc from "@/public/assets/images/Clients/ntc.png";
-import DomesticShopping from "@/public/assets/images/services/domestic-shopping.jpg";
-import CountUp, { useCountUp } from "react-countup";
-import B2b from "@/public/assets/images/services/b2b-shipping.jpg";
-import LocalDelivery from "@/public/assets/images/services/local-delivery.jpg";
+import Services from "@/src/components/services";
+import CountUp from "react-countup";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
 import Testimonial from "@/src/components/testimonial";
+import Pricing from "@/src/components/pricingplan";
 import Blog from "@/src/components/blog";
-import { count } from "console";
 
 const Page = () => {
-  useCountUp({
-    ref: "counter",
-    end: 300,
-    enableScrollSpy: true,
-    scrollSpyDelay: 1000,
-  });
   const herosettings = {
     arrows: false,
     dots: false,
@@ -313,114 +305,7 @@ const Page = () => {
             </h2>
           </div>
           <div className="mt-8 lg:mt-12 servicesWrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="service-block relative">
-              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
-                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
-                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
-                    <Link href="#">
-                      <Image
-                        src={DomesticShopping}
-                        alt="services"
-                        className="transition-all ease-linear duration-300"
-                      />
-                    </Link>
-                  </figure>
-                </div>
-                <div className="service-contentbox mx-4">
-                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
-                    <Link href="#">
-                      <h2 className="text-2xl font-bold hover:text-primary">
-                        Domestic shipping
-                      </h2>
-                    </Link>
-                    <p className="mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Contrary to popular belief, Lorem
-                      Ipsum is not simply random text.
-                    </p>
-                    <Link
-                      href="#"
-                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
-                    >
-                      <span>See Detail</span>
-                      <span className="icon-arrow-up-right font-bold"></span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="service-block relative">
-              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
-                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
-                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
-                    <Link href="#">
-                      <Image
-                        src={B2b}
-                        alt="services"
-                        className="transition-all ease-linear duration-300"
-                      />
-                    </Link>
-                  </figure>
-                </div>
-                <div className="service-contentbox mx-4">
-                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
-                    <Link href="#">
-                      <h2 className="text-2xl font-bold hover:text-primary">
-                        B2B shipping
-                      </h2>
-                    </Link>
-                    <p className="mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Contrary to popular belief, Lorem
-                      Ipsum is not simply random text.
-                    </p>
-                    <Link
-                      href="#"
-                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
-                    >
-                      <span>See Detail</span>
-                      <span className="icon-arrow-up-right font-bold"></span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="service-block relative">
-              <div className="servicelist relative text-center rounded-lg border-b-2 border-transparent transition-all ease-linear duration-300">
-                <div className="image-box bg-white border-2 border-white rounded-lg transition-all ease-linear duration-300 pt-8">
-                  <figure className="overlay-anim relative inline-block overflow-hidden mx-4 mb-0">
-                    <Link href="#">
-                      <Image
-                        src={LocalDelivery}
-                        alt="services"
-                        className="transition-all ease-linear duration-300"
-                      />
-                    </Link>
-                  </figure>
-                </div>
-                <div className="service-contentbox mx-4">
-                  <div className="text-left relative p-8 bg-white overflow-hidden -mt-4 rounded-bl-lg rounded-br-lg">
-                    <Link href="#">
-                      <h2 className="text-2xl font-bold hover:text-primary">
-                        Hyperlocal delivery
-                      </h2>
-                    </Link>
-                    <p className="mt-3">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Contrary to popular belief, Lorem
-                      Ipsum is not simply random text.
-                    </p>
-                    <Link
-                      href="#"
-                      className="mt-8 flex items-center space-x-2 text-secondary hover:text-primary"
-                    >
-                      <span>See Detail</span>
-                      <span className="icon-arrow-up-right font-bold"></span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Services />
           </div>
         </div>
       </section>
@@ -513,118 +398,7 @@ const Page = () => {
             </h2>
           </div>
           <div className="mt-8 lg:mt-12 grid md:grid-cols-3 gap-4 lg:gap-8">
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
-              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                  Rs 5000<sub className="text-base">/Month</sub>
-                </h2>
-                <p className="text-sm lg:text-base">
-                  *Rates are subject to change
-                </p>
-                <h3 className="text-2xl font-bold text-primary">Lite Plan</h3>
-              </div>
-              <button type="button" className="mt-4 mb-8 RSbutton w-full">
-                Choose Plan
-              </button>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
-              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                  Rs 10,000<sub className="text-base">/Month</sub>
-                </h2>
-                <p className="text-sm lg:text-base">
-                  *Rates are subject to change
-                </p>
-                <h3 className="text-2xl font-bold text-primary">
-                  Professional Plan
-                </h3>
-              </div>
-              <button type="button" className="mt-4 mb-8 RSbutton w-full">
-                Choose Plan
-              </button>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 lg:p-8 xl:p-16 rounded-lg bg-white shadow-2xl">
-              <div className="space-y-4 text-right pb-8 border-b border-gray-200">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                  Rs 20,000<sub className="text-base">/Month</sub>
-                </h2>
-                <p className="text-sm lg:text-base">
-                  *Rates are subject to change
-                </p>
-                <h3 className="text-2xl font-bold text-primary">
-                  Enterprise Plan
-                </h3>
-              </div>
-              <button type="button" className="mt-4 mb-8 RSbutton w-full">
-                Choose Plan
-              </button>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="icon-check text-secondary text-lg font-bold"></span>
-                  <span>24/7 Free Support</span>
-                </div>
-              </div>
-            </div>
+            <Pricing />
           </div>
         </div>
       </section>
