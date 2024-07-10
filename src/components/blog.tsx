@@ -100,12 +100,12 @@ const Blog = () => {
                   alt="Blog Image"
                   width={600}
                   height={400}
-                  className="w-full h-auto object-cover aspect-[4/3] transition-all ease-linear duration-300"
+                  className="w-full h-auto object-cover aspect-[4/3] rounded-tl-lg rounded-tr-lg transition-all ease-linear duration-300"
                 />
               </Link>
             </figure>
           </div>
-          <div className="p-4 md:p-8 bg-gray-100">
+          <div className="p-4 md:p-8 bg-gray-100 rounded-bl-lg rounded-br-lg">
             <div className="flex items-center space-x-2 md:space-x-4">
               <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
                 <span className="icon-user"></span>
