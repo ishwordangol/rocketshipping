@@ -287,7 +287,10 @@ h6 {
 }
 
 @media only screen and (max-width: 480px) {
-  .sliderWrapper .slick-slide:first-child,
+  .sliderWrapper .slick-slide:first-child {
+    @apply -ml-5;
+  }
+
   .sliderWrapper.pricingSlider .slick-slide:first-child {
     @apply -ml-5;
   }
