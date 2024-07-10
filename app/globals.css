@@ -187,6 +187,9 @@ h6 {
 
 .sliderWrapper .slick-track {
   display: flex;
+}
+
+.sliderWrapper.testimonialSlider .slick-track {
   align-items: center;
 }
 
@@ -264,13 +267,19 @@ h6 {
 }
 
 @media only screen and (max-width: 768px) {
-  .sliderWrapper .slick-current {
-    @apply -ml-12;
+  .sliderWrapper .slick-slide:first-child {
+    @apply -ml-10;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .headerRight > .RSbutton {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sliderWrapper .slick-slide:first-child {
+    @apply -ml-5;
   }
 }

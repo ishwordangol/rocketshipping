@@ -70,6 +70,17 @@ const blogsettings = {
         slidesToScroll: 1,
       },
     },
+
+    {
+      breakpoint: 480,
+      settings: {
+        dots: false,
+        centerMode: true,
+        centerPadding: "28px",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
   ],
 };
 
@@ -94,19 +105,19 @@ const Blog = () => {
               </Link>
             </figure>
           </div>
-          <div className="p-8 bg-gray-100">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center gap-2 text-sm">
+          <div className="p-4 md:p-8 bg-gray-100">
+            <div className="flex items-center space-x-2 md:space-x-4">
+              <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
                 <span className="icon-user"></span>
                 <span className="username">By {bloglist.name}</span>
               </div>
-              <div className="flex items-center gap-2 text-sm">
+              <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
                 <span className="icon-calendar"></span>
                 <span className="dateposted">{bloglist.date}</span>
               </div>
             </div>
             <Link href="#" className="inline-block">
-              <h2 className="font-bold text-2xl my-4 hover:text-primary">
+              <h2 className="font-bold text-xl md:text-2xl my-4 hover:text-primary">
                 {bloglist.title}
               </h2>
             </Link>

@@ -33,6 +33,16 @@ const testimonialsettings = {
         slidesToScroll: 1,
       },
     },
+    {
+      breakpoint: 480,
+      settings: {
+        dots: false,
+        centerMode: true,
+        centerPadding: "28px",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
   ],
 };
 
