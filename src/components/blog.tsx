@@ -117,7 +117,7 @@ const Blog = () => {
               </div>
             </div>
             <Link href="#" className="inline-block">
-              <h2 className="font-bold text-xl md:text-2xl my-4 hover:text-primary">
+              <h2 className="font-bold text-xl md:text-2xl my-4 hover:text-primary line-clamp-2">
                 {bloglist.title}
               </h2>
             </Link>
