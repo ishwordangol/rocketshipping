@@ -93,7 +93,7 @@ const Blog = () => {
       {blog.blogcontent.map((bloglist, index) => (
         <div key={index} className="relative bloglist">
           <div className="image-box">
-            <figure className="overlay-anim overflow-hidden">
+            <figure className="overlay-anim overflow-hidden rounded-tl-lg rounded-tr-lg">
               <Link href="#" className="w-full h-full">
                 <Image
                   src={bloglist.imgsource}
