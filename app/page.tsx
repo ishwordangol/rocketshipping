@@ -119,6 +119,48 @@ const Page = () => {
     ],
   };
 
+  const pricingsetting = {
+    arrows: false,
+    dots: true,
+    infinite: false,
+    autoplay: false,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          centerMode: true,
+          centerPadding: "48px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 480,
+        settings: {
+          dots: false,
+          centerMode: true,
+          centerPadding: "28px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Header />
@@ -397,9 +439,7 @@ const Page = () => {
               AFFORDABLE PLANS
             </h2>
           </div>
-          <div className="mt-8 lg:mt-12 grid md:grid-cols-3 gap-4 lg:gap-8">
-            <Pricing />
-          </div>
+          <Pricing />
         </div>
       </section>
       <section className="testimonialWrapper py-12 sm:py-16 md:py-24 lg:py-32 bg-gray-50">
