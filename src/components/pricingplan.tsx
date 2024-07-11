@@ -6,7 +6,7 @@ import Image from "next/image";
 import CoupenImage from "@/public/assets/images/star-discount.png";
 
 const Pricingplan = () => {
-  const [isSlick, setIsSlick] = useState(window.innerWidth <= 1024);
+  const [isSlick, setIsSlick] = useState(false);
   const sliderRef = useRef(null);
 
   const pricesettings = {
@@ -146,6 +146,8 @@ const Pricingplan = () => {
     const handleResize = () => {
       setIsSlick(window.innerWidth <= 1024);
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     handleResize(); // Call on mount
