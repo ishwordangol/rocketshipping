@@ -48,6 +48,10 @@ const Blog: React.FC = () => {
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+  };
   const blogsettings = {
     arrows: false,
     dots: true,
@@ -57,6 +61,9 @@ const Blog: React.FC = () => {
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
+    adaptiveHeight: true,
+    swipe: true,
+    touchThreshold: 10, // Adjust this value for smoother touch response
     responsive: [
       {
         breakpoint: 1024,
@@ -90,7 +97,7 @@ const Blog: React.FC = () => {
     ],
   };
   return (
-    <div onTouchStart={handleTouchStart} onTouchMove={handleTouchStart}>
+    <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
       <Slider
         ref={sliderRef}
         {...blogsettings}
