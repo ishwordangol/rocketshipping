@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -42,95 +42,102 @@ const blog = {
   ],
 };
 
-const blogsettings = {
-  arrows: false,
-  dots: true,
-  infinite: false,
-  autoplay: false,
-  speed: 500,
-  autoplaySpeed: 2000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        dots: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        dots: false,
-        centerMode: true,
-        centerPadding: "48px",
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
+const Blog: React.FC = () => {
+  const sliderRef = useRef<Slider>(null);
 
-    {
-      breakpoint: 480,
-      settings: {
-        dots: false,
-        centerMode: true,
-        centerPadding: "28px",
-        slidesToShow: 1,
-        slidesToScroll: 1,
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault();
+  };
+  const blogsettings = {
+    arrows: false,
+    dots: true,
+    infinite: false,
+    autoplay: false,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
-};
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          centerMode: true,
+          centerPadding: "48px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
 
-const Blog = () => {
+      {
+        breakpoint: 480,
+        settings: {
+          dots: false,
+          centerMode: true,
+          centerPadding: "28px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
-    <Slider
-      {...blogsettings}
-      className="mt-8 lg:mt-12 sliderWrapper blogSlider"
-    >
-      {blog.blogcontent.map((bloglist, index) => (
-        <div key={index} className="relative bloglist">
-          <div className="image-box">
-            <figure className="overlay-anim overflow-hidden rounded-tl-lg rounded-tr-lg">
-              <Link href="#" className="w-full h-full">
-                <Image
-                  src={bloglist.imgsource}
-                  alt="Blog Image"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover aspect-[4/3] rounded-tl-lg rounded-tr-lg transition-all ease-linear duration-300"
-                />
-              </Link>
-            </figure>
-          </div>
-          <div className="p-4 md:p-8 bg-gray-100 rounded-bl-lg rounded-br-lg">
-            <div className="flex items-center space-x-2 md:space-x-4">
-              <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
-                <span className="icon-user"></span>
-                <span className="username">By {bloglist.name}</span>
-              </div>
-              <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
-                <span className="icon-calendar"></span>
-                <span className="dateposted">{bloglist.date}</span>
-              </div>
+    <div onTouchStart={handleTouchStart} onTouchMove={handleTouchStart}>
+      <Slider
+        ref={sliderRef}
+        {...blogsettings}
+        className="mt-8 lg:mt-12 sliderWrapper blogSlider"
+      >
+        {blog.blogcontent.map((bloglist, index) => (
+          <div key={index} className="relative bloglist">
+            <div className="image-box">
+              <figure className="overlay-anim overflow-hidden rounded-tl-lg rounded-tr-lg">
+                <Link href="#" className="w-full h-full">
+                  <Image
+                    src={bloglist.imgsource}
+                    alt="Blog Image"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover aspect-[4/3] rounded-tl-lg rounded-tr-lg transition-all ease-linear duration-300"
+                  />
+                </Link>
+              </figure>
             </div>
-            <Link href="#" className="inline-block">
-              <h2 className="font-bold text-xl md:text-2xl my-4 hover:text-primary line-clamp-2">
-                {bloglist.title}
-              </h2>
-            </Link>
-            <Link
-              href={bloglist.link}
-              className="flex items-center space-x-2 hover:text-secondary transition-colors ease-linear duration-100"
-            >
-              Read more <span className="icon-chevron-right"></span>
-            </Link>
+            <div className="p-4 md:p-8 bg-gray-100 rounded-bl-lg rounded-br-lg">
+              <div className="flex items-center space-x-2 md:space-x-4">
+                <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
+                  <span className="icon-user"></span>
+                  <span className="username">By {bloglist.name}</span>
+                </div>
+                <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
+                  <span className="icon-calendar"></span>
+                  <span className="dateposted">{bloglist.date}</span>
+                </div>
+              </div>
+              <Link href="#" className="inline-block">
+                <h2 className="font-bold text-xl md:text-2xl my-4 hover:text-primary line-clamp-2">
+                  {bloglist.title}
+                </h2>
+              </Link>
+              <Link
+                href={bloglist.link}
+                className="flex items-center space-x-2 hover:text-secondary transition-colors ease-linear duration-100"
+              >
+                Read more <span className="icon-chevron-right"></span>
+              </Link>
+            </div>
           </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
