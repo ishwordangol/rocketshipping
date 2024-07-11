@@ -61,7 +61,6 @@ const Blog: React.FC = () => {
     autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    adaptiveHeight: true,
     swipe: true,
     touchThreshold: 10, // Adjust this value for smoother touch response
     responsive: [
