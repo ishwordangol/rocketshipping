@@ -51,7 +51,6 @@ const blogsettings = {
   autoplaySpeed: 2000,
   slidesToShow: 3,
   slidesToScroll: 1,
-  touchMove: false,
   responsive: [
     {
       breakpoint: 1024,
