@@ -12,21 +12,21 @@ const Services = () => {
         image: DomesticShopping,
         title: "Domestic Shopping",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Contrary to popular belief, Lorem Ipsum is not simply random text.",
+          "Rocket Shipping offers fast, reliable domestic delivery. From small parcels to large shipments, we ensure your packages arrive safely and on time, every time.",
         link: "/services",
       },
       {
         image: B2b,
         title: "B2B shipping",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Contrary to popular belief, Lorem Ipsum is not simply random text.",
+          "Rocket Shipping specializes in quick and dependable B2B delivery. We ensure your business shipments, big or small, reach their destination safely and promptly.",
         link: "/services",
       },
       {
         image: LocalDelivery,
         title: "Hyperlocal delivery",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Contrary to popular belief, Lorem Ipsum is not simply random text.",
+          "Offers hyperlocal delivery services, ensuring fast and reliable delivery within your neighborhood. Experience seamless convenience and speed with our efficient local couriers.",
         link: "/services",
       },
     ],

@@ -78,10 +78,9 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
           <p className="py-5 border-b border-gray-200">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Rocket Shipping has transformed my delivery experience. The app is
+            easy to use, and their local couriers are incredibly fast and
+            reliable. It’s my top choice for quick, dependable deliveries!
           </p>
           <div className="testimonial-bottom mt-5 flex gap-4">
             <Image
@@ -92,8 +91,8 @@ const Testimonial: React.FC = () => {
               className="w-14 h-14 rounded-full"
             />
             <div className="userinfo flex-1">
-              <h4 className="text-lg font-bold">Ishwor Dangol</h4>
-              <span className="block text-sm">05/07/2024</span>
+              <h4 className="text-lg font-bold">Devendra Jung</h4>
+              <span className="block text-sm">07/07/2024</span>
             </div>
           </div>
         </div>
@@ -111,10 +110,9 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
           <p className="py-5 border-b border-gray-200">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            The Rocket Shipping app is fantastic for local deliveries. It’s
+            user-friendly, and the service is consistently prompt and efficient.
+            I rely on it daily for its speed and convenience!
           </p>
           <div className="testimonial-bottom mt-5 flex gap-4">
             <Image
@@ -126,7 +124,7 @@ const Testimonial: React.FC = () => {
             />
             <div className="userinfo flex-1">
               <h4 className="text-lg font-bold">Ishwor Dangol</h4>
-              <span className="block text-sm">05/07/2024</span>
+              <span className="block text-sm">05/09/2024</span>
             </div>
           </div>
         </div>
@@ -144,10 +142,10 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
           <p className="py-5 border-b border-gray-200">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Rocket Shipping delivers exceptional local service with an intuitive
+            app and swift deliveries. The speed and reliability are outstanding.
+            It’s perfect for anyone needing fast, reliable neighborhood
+            deliveries!
           </p>
           <div className="testimonial-bottom mt-5 flex gap-4">
             <Image
@@ -158,8 +156,8 @@ const Testimonial: React.FC = () => {
               className="w-14 h-14 rounded-full"
             />
             <div className="userinfo flex-1">
-              <h4 className="text-lg font-bold">Ishwor Dangol</h4>
-              <span className="block text-sm">05/07/2024</span>
+              <h4 className="text-lg font-bold"> Ram Shrestha</h4>
+              <span className="block text-sm">05/012/2024</span>
             </div>
           </div>
         </div>
@@ -177,10 +175,9 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
           <p className="py-5 border-b border-gray-200">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            I’m impressed with Rocket Shipping’s service! The app is simple to
+            navigate, and deliveries are always timely. It’s ideal for anyone
+            who needs efficient and fast local delivery solutions.
           </p>
           <div className="testimonial-bottom mt-5 flex gap-4">
             <Image
@@ -191,7 +188,7 @@ const Testimonial: React.FC = () => {
               className="w-14 h-14 rounded-full"
             />
             <div className="userinfo flex-1">
-              <h4 className="text-lg font-bold">Ishwor Dangol</h4>
+              <h4 className="text-lg font-bold">Nishal Bhattrai</h4>
               <span className="block text-sm">05/07/2024</span>
             </div>
           </div>

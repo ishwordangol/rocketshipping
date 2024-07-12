@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Header from "../src/components/header";
 import Footer from "@/src/components/footer";
@@ -163,6 +163,9 @@ const Page = () => {
     ],
   };
 
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
   return (
     <>
       <Header />
@@ -260,6 +263,19 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <section className="relative pricingWrapper py-12 sm:py-16 md:py-24 2xl:py-32">
+        <div className="relative container z-10">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-white text-base uppercase font-bold">
+              Price Plan
+            </h3>
+            <h2 className="text-white my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+              AFFORDABLE PLANS
+            </h2>
+          </div>
+          <Pricing />
+        </div>
+      </section>
       {/* <section className="aboutWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -329,41 +345,6 @@ const Page = () => {
           </div>
         </div>
       </section> */}
-      <section className="countWrapper py-12 md:py-16 2xl:py-24 bg-primary">
-        <div className="container">
-          <div className="flex justify-center">
-            <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 lg:gap-16 2xl:gap-32">
-              <div className="w-full sm:w-auto">
-                <h4 className="text-white">Fun facts about Rocket Shipping </h4>
-                <h2 className="mt-0 sm:mt-4 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-                  Numbers speak
-                </h2>
-              </div>
-              <div className="w-full sm:w-auto">
-                <div className="flex justify-between sm:justify-normal items-center sm:text-center gap-2 sm:gap-4 lg:gap-8 2xl:gap-16">
-                  {about.otherContent.map((item, index) => {
-                    return (
-                      <div key={index}>
-                        <span
-                          className={`inline-block text-2xl md:text-3xl lg:text-4xl text-white ${item.icon}`}
-                        ></span>
-
-                        <div className="flex items-cnter mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-                          <CountUp end={item.count} enableScrollSpy />
-                          <span className="block">{item.tag}</span>
-                        </div>
-                        <p className="text-base text-white mt-3 font-bold">
-                          {item.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="how-we-workWrapper py-12 sm:py-16 md:py-24 2xl:py-32 bg-gray-50">
         <div className="container">
@@ -443,19 +424,42 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="relative pricingWrapper py-12 sm:py-16 md:py-24 2xl:py-32">
-        <div className="relative container z-10">
-          <div className="heading-title flex justify-center flex-col text-center">
-            <h3 className="text-white text-base uppercase font-bold">
-              Price Plan
-            </h3>
-            <h2 className="text-white my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
-              AFFORDABLE PLANS
-            </h2>
+      <section className="countWrapper py-12 md:py-16 2xl:py-24 bg-primary">
+        <div className="container">
+          <div className="flex justify-center">
+            <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 lg:gap-16 2xl:gap-32">
+              <div className="w-full sm:w-auto">
+                <h4 className="text-white">Fun facts about Rocket Shipping </h4>
+                <h2 className="mt-0 sm:mt-4 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                  Numbers speak
+                </h2>
+              </div>
+              <div className="w-full sm:w-auto">
+                <div className="flex justify-between sm:justify-normal items-center sm:text-center gap-2 sm:gap-4 lg:gap-8 2xl:gap-16">
+                  {about.otherContent.map((item, index) => {
+                    return (
+                      <div key={index}>
+                        <span
+                          className={`inline-block text-2xl md:text-3xl lg:text-4xl text-white ${item.icon}`}
+                        ></span>
+
+                        <div className="flex items-cnter mt-3 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+                          <CountUp end={item.count} enableScrollSpy />
+                          <span className="block">{item.tag}</span>
+                        </div>
+                        <p className="text-base text-white mt-3 font-bold">
+                          {item.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
-          <Pricing />
         </div>
       </section>
+
       <section className="testimonialWrapper py-12 sm:py-16 md:py-24 2xl:py-32 bg-gray-50">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
