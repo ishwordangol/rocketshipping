@@ -41,7 +41,7 @@ const Header = () => {
   const links = [
     {
       id: 1,
-      link: "/about-us",
+      link: "/about",
       menuname: "About Us",
     },
     {
@@ -103,7 +103,7 @@ const Header = () => {
               <div className="headerLeft">
                 <Link href="/">
                   <Image
-                    src={isPinned ? LogoMain : LogoWhite}
+                    src={isPinned ? LogoMain : LogoMain}
                     alt="Logo"
                     className="h-20 md:h-auto"
                   />
@@ -116,7 +116,7 @@ const Header = () => {
                       <Link
                         href={link}
                         className={`font-semibold text-lg hover:text-primary transition-all ease-in-out duration-300 ${
-                          isPinned ? "text-black" : "text-white"
+                          isPinned ? "text-black" : "text-black"
                         }`}
                       >
                         {menuname}
@@ -130,7 +130,7 @@ const Header = () => {
                 <button onClick={openModal} className="z-10 RSbutton">
                   Track Your Order
                 </button>
-                <button className="w-12 h-12 flex items-center justify-center bg-white rounded-full text-black">
+                <button className="w-12 h-12 flex items-center justify-center bg-black rounded-full text-white hover:bg-primary">
                   <span className="icon-search text-xl"></span>
                 </button>
                 <div
@@ -146,7 +146,7 @@ const Header = () => {
                   ) : (
                     <span
                       className={`icon-menu text-2xl ${
-                        isPinned ? "text-black" : "text-white"
+                        isPinned ? "text-black" : "text-black"
                       }`}
                     ></span>
                   )}

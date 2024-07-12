@@ -19,6 +19,7 @@ import Ntc from "@/public/assets/images/Clients/ntc.png";
 import Services from "@/src/components/services";
 import CountUp from "react-countup";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
+import ShippingPlacesBanner from "@/public/assets/images/banners/banner5.jpg";
 import Testimonial from "@/src/components/testimonial";
 import Pricing from "@/src/components/pricingplan";
 import Blog from "@/src/components/blog";
@@ -34,6 +35,7 @@ const Page = () => {
   };
 
   const clientsettings = {
+    arrows: false,
     dots: false,
     infinite: true,
     autoplay: true,
@@ -62,7 +64,7 @@ const Page = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -164,9 +166,8 @@ const Page = () => {
   return (
     <>
       <Header />
-      <Slider {...herosettings} className="heroSlider">
-        <div className="relative">
-          <video
+      <div className="relative pt-16 bg-primarylight lg:pt-0">
+        {/* <video
             width="100%"
             height="100%"
             autoPlay
@@ -179,19 +180,29 @@ const Page = () => {
               src="./assets/images/rocket-shipping.mp4"
               type="video/mp4"
             />
-          </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-          <div className="w-full absolute top-1/2 -translate-y-1/2">
-            <div className="container">
-              <div className="hidden md:block px-16 max-w-5xl">
-                <h1 className="text-7xl text-white font-bold leading-tight tracking-wider">
-                  Fastest Shipping Products in Nepal
+          </video> */}
+        <Image
+          src={ShippingPlacesBanner}
+          alt="Banner"
+          className="h-[26vh] xs:h-[34vh] sm:h-[46vh] object-cover object-right-bottom lg:h-auto w-full lg:object-contain lg:object-center"
+        />
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div> */}
+        <div className="w-full absolute bottom-0 xl:bottom-[10%] 2xl:top-1/2 2xl:-translate-y-1/2">
+          <div className="container">
+            <div className="flex items-center">
+              <div className="hidden lg:block max-w-md xl:max-w-lg 2xl:max-w-xl">
+                <h1 className="text-4xl xl:text-5xl text-black font-bold leading-tight tracking-wider">
+                  Fastest Delivery Network
                 </h1>
-                <p className="mt-8 text-white leading-normal text-xl tracking-wider">
-                  Experience the Fastest Shipping for Your Products in Nepal! At
-                  Rocket Shipping, we guarantee swift and reliable deliveries,
-                  ensuring your packages reach their destination on time, every
-                  time. Trust us for unparalleled speed and exceptional service.
+                <p className="mt-8 text-black leading-normal text-xl tracking-wider">
+                  {/* Experience the Fastest Shipping for Your Products in Nepal!
+                    At Rocket Shipping, we guarantee swift and reliable
+                    deliveries, ensuring your packages reach their destination
+                    on time, every time. Trust us for unparalleled speed and
+                    exceptional service. */}
+                  Experience the Fastest Shipping for Your Products nationwide
+                  home delivery with an extensive networks of riders across
+                  Nepal.
                 </p>
                 <div className="inline-block">
                   <Link href="#" className="mt-8 RSbutton">
@@ -199,20 +210,22 @@ const Page = () => {
                   </Link>
                 </div>
               </div>
-              {/* <Link href="#" className="block md:hidden RSbutton">
-                Track Your Order
-              </Link> */}
+              {/* <Image
+                  src={ShippingPlacesBanner}
+                  alt="Shipping Places"
+                  className="w-full rounded-lg"
+                /> */}
             </div>
           </div>
         </div>
-      </Slider>
-      <section className="clientWrapper py-12 md:py-16 lg:py-24 border-b border-gray-200 overflow-hidden">
+      </div>
+      <section className="clientWrapper py-12 overflow-hidden bg-primarylight">
         <div className="container">
-          <div className="flex justify-center titleWrapper mb-8 lg:mb-16">
+          {/* <div className="flex justify-center titleWrapper mb-8 lg:mb-16">
             <h2 className="font-bold text-2xl lg:text-3xl">
               Trusted by companies, big or not-so-big:
             </h2>
-          </div>
+          </div> */}
           <Slider {...clientsettings} className="clientSlider">
             {clientimageList.map((imagePath, index) => (
               <>
@@ -232,7 +245,22 @@ const Page = () => {
           </Slider>
         </div>
       </section>
-      <section className="aboutWrapper py-12 sm:py-16 md:py-24 lg:py-32">
+      <section className="servicesWrapper py-12 sm:py-16 md:py-24 2xl:py-32">
+        <div className="container">
+          <div className="heading-title flex justify-center flex-col text-center">
+            <h3 className="text-base uppercase font-bold text-primary">
+              Our Services
+            </h3>
+            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
+              WHAT WE ARE OFFERING
+            </h2>
+          </div>
+          <div className="mt-8 lg:mt-12 servicesWrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Services />
+          </div>
+        </div>
+      </section>
+      {/* <section className="aboutWrapper py-12 sm:py-16 md:py-24 lg:py-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             <Image
@@ -300,8 +328,8 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="countWrapper py-12 md:py-16 lg:py-24 bg-primary">
+      </section> */}
+      <section className="countWrapper py-12 md:py-16 2xl:py-24 bg-primary">
         <div className="container">
           <div className="flex justify-center">
             <div className="2xl:max-w-7xl flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 lg:gap-16 2xl:gap-32">
@@ -336,22 +364,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="servicesWrapper py-12 sm:py-16 md:py-24 lg:py-32">
-        <div className="container">
-          <div className="heading-title flex justify-center flex-col text-center">
-            <h3 className="text-base uppercase font-bold text-primary">
-              Our Services
-            </h3>
-            <h2 className="my-4 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-black">
-              WHAT WE ARE OFFERING
-            </h2>
-          </div>
-          <div className="mt-8 lg:mt-12 servicesWrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Services />
-          </div>
-        </div>
-      </section>
-      <section className="how-we-workWrapper py-12 sm:py-16 md:py-24 lg:py-32 bg-gray-50">
+
+      <section className="how-we-workWrapper py-12 sm:py-16 md:py-24 2xl:py-32 bg-gray-50">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
@@ -429,7 +443,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="relative pricingWrapper py-12 sm:py-16 md:py-24 lg:py-32">
+      <section className="relative pricingWrapper py-12 sm:py-16 md:py-24 2xl:py-32">
         <div className="relative container z-10">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-white text-base uppercase font-bold">
@@ -442,7 +456,7 @@ const Page = () => {
           <Pricing />
         </div>
       </section>
-      <section className="testimonialWrapper py-12 sm:py-16 md:py-24 lg:py-32 bg-gray-50">
+      <section className="testimonialWrapper py-12 sm:py-16 md:py-24 2xl:py-32 bg-gray-50">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">
@@ -455,7 +469,7 @@ const Page = () => {
           <Testimonial />
         </div>
       </section>
-      <section className="blogWrapper py-12 sm:py-16 md:py-24 lg:py-32">
+      <section className="blogWrapper py-12 sm:py-16 md:py-24 2xl:py-32">
         <div className="container">
           <div className="heading-title flex justify-center flex-col text-center">
             <h3 className="text-base uppercase font-bold text-primary">

@@ -3,7 +3,7 @@ import React from "react";
 import Header from "@/src/components/header";
 import Footer from "@/src/components/footer";
 
-const About = () => {
+const page = () => {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default page;
