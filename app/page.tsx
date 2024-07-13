@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "../src/components/header";
 import Footer from "@/src/components/footer";
@@ -20,6 +20,7 @@ import Services from "@/src/components/services";
 import CountUp from "react-countup";
 import ShippingPlaces from "@/public/assets/images/shipping-places.jpg";
 import ShippingPlacesBanner from "@/public/assets/images/banners/banner5.jpg";
+import ShippingPlacesBannerMobile from "@/public/assets/images/banners/banner-mobile.jpg";
 import Testimonial from "@/src/components/testimonial";
 import Pricing from "@/src/components/pricingplan";
 import Blog from "@/src/components/blog";
@@ -121,6 +122,8 @@ const Page = () => {
     ],
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
   const pricingsetting = {
     arrows: false,
     dots: true,
@@ -165,31 +168,35 @@ const Page = () => {
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
     <>
       <Header />
       <div className="relative pt-16 bg-primarylight lg:pt-0">
-        {/* <video
-            width="100%"
-            height="100%"
-            autoPlay
-            loop
-            muted
-            preload="none"
-            className="w-full h-dvh object-cover"
-          >
-            <source
-              src="./assets/images/rocket-shipping.mp4"
-              type="video/mp4"
+        <>
+          {isMobile ? (
+            <Image
+              src={ShippingPlacesBannerMobile}
+              alt="Banner"
+              className="w-full"
             />
-          </video> */}
-        <Image
-          src={ShippingPlacesBanner}
-          alt="Banner"
-          className="h-[26vh] xs:h-[34vh] sm:h-[46vh] object-cover object-right-bottom lg:h-auto w-full lg:object-contain lg:object-center"
-        />
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div> */}
+          ) : (
+            <Image
+              src={ShippingPlacesBanner}
+              alt="Banner"
+              className="h-[26vh] xs:h-[34vh] sm:h-[46vh] object-cover object-right-bottom lg:h-auto w-full lg:object-contain lg:object-center"
+            />
+          )}
+        </>
         <div className="w-full absolute bottom-0 xl:bottom-[10%] 2xl:top-1/2 2xl:-translate-y-1/2">
           <div className="container">
             <div className="flex items-center">
