@@ -6,6 +6,29 @@ import LogoWhite from "@/public/assets/images/rocketshipping-logo-white.svg";
 const Footer = () => {
   return (
     <footer className="bg-footer">
+      <section className="bg-gray-800 py-8 md:py-16">
+        <div className="container">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl xl:text-4xl text-white font-bold">
+                Looking for the Best Shipping Services?
+              </h2>
+              <h4 className=" text-white">
+                Please contact in a given number, We will help to organize.
+              </h4>
+            </div>
+            <Link
+              href="tel:+977-9841664422"
+              className="flex items-center space-x-2 text-white p-4 border border-gray-700 rounded-lg hover:bg-primary hover:border-primary"
+            >
+              <span className="icon-smartphone text-2xl md:text-3xl xl:text-4xl"></span>
+              <span className="text-2xl md:text-3xl xl:text-4xll">
+                +977-9841664422
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="py-12 md:py-16 lg:py-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-16">
