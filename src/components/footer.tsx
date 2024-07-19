@@ -18,12 +18,12 @@ const Footer = () => {
               </h4>
             </div>
             <Link
-              href="tel:+977-9841664422"
+              href="tel:+977-9851053926"
               className="flex items-center space-x-2 text-white p-4 border border-gray-700 rounded-lg hover:bg-primary hover:border-primary"
             >
               <span className="icon-smartphone text-2xl md:text-3xl xl:text-4xl"></span>
               <span className="text-2xl md:text-3xl xl:text-4xll">
-                +977-9841664422
+                +977-9851053926
               </span>
             </Link>
           </div>
@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-16">
             <div className="lg:col-span-2">
               <Link href="#">
-                <Image src={LogoWhite} width={200} height={200} alt="Logo" />
+                <Image src={LogoWhite} alt="Logo" />
               </Link>
               <p className="text-gray-400 mt-1">
                 A premier technology solutions company for providing fast,
