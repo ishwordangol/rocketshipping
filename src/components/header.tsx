@@ -1,7 +1,9 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Headroom from "react-headroom";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import "@/public/assets/css/icomoon.css";
 import "@/app/globals.css";
 import LogoMain from "@/public/assets/images/logo.svg";
@@ -85,6 +87,7 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [scrollPosition, pinStart, nav]);
+  const router = useRouter();
   return (
     <>
       <Headroom
@@ -129,11 +132,16 @@ const Header = () => {
               <div className="flex items-center space-x-4 sm:space-x-2 md:space-x-3 headerRight">
                 <button
                   onClick={openModal}
+                  type="button"
                   className="z-10 RSbutton RSbutton-primary"
                 >
                   Track Your Order
                 </button>
-                <button className="z-10 RSbutton RSbutton-secondary">
+                <button
+                  className="z-10 RSbutton RSbutton-secondary"
+                  type="button"
+                  onClick={() => router.push("/login")}
+                >
                   Login
                 </button>
                 <div
