@@ -25,6 +25,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-apple:before {
+  content: "\ea1e";
+  color: #999;
+}
+.icon-applepay:before {
+  content: "\ea1f";
+}
+.icon-facebook1:before {
+  content: "\ea20";
+  color: #1877f2;
+}
+.icon-google:before {
+  content: "\ea21";
+  color: #4285f4;
+}
+.icon-googlepay:before {
+  content: "\ea22";
+  color: #5f6368;
+}
+.icon-googleplay:before {
+  content: "\ea23";
+  color: #607d8b;
+}
+.icon-groupon:before {
+  content: "\ea24";
+  color: #53a318;
+}
+.icon-ios:before {
+  content: "\ea25";
+}
+.icon-linkedin1:before {
+  content: "\ea26";
+  color: #0077b5;
+}
+.icon-messenger:before {
+  content: "\ea27";
+  color: #00b2ff;
+}
+.icon-paypal:before {
+  content: "\ea28";
+  color: #00457c;
+}
+.icon-tiktok:before {
+  content: "\ea29";
+}
+.icon-x1:before {
+  content: "\ea2a";
+}
+.icon-visa:before {
+  content: "\ea2b";
+  color: #142787;
+}
+.icon-whatsapp:before {
+  content: "\ea2c";
+  color: #25d366;
+}
+.icon-youtube1:before {
+  content: "\ea2d";
+  color: #f00;
+}
+
 .icon-star1:before {
   content: "\f005";
 }

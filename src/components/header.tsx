@@ -126,12 +126,15 @@ const Header = () => {
                 </ul>
               </nav>
 
-              <div className="flex items-center space-x-4 sm:space-x-2 md:space-x-4 headerRight">
-                <button onClick={openModal} className="z-10 RSbutton">
+              <div className="flex items-center space-x-4 sm:space-x-2 md:space-x-3 headerRight">
+                <button
+                  onClick={openModal}
+                  className="z-10 RSbutton RSbutton-primary"
+                >
                   Track Your Order
                 </button>
-                <button className="w-12 h-12 flex items-center justify-center bg-black rounded-full text-white hover:bg-primary">
-                  <span className="icon-search text-xl"></span>
+                <button className="z-10 RSbutton RSbutton-secondary">
+                  Login
                 </button>
                 <div
                   onClick={() => setNav(!nav)}
@@ -179,7 +182,7 @@ const Header = () => {
         </div>
       )}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div className="max-w-[600px]">
+        <div className="max-w-[768px]">
           <h2 className="font-bold text-3xl leading-normal">Order Tracking</h2>
           <p>
             Provides specialized delivery services for packages, documents, and

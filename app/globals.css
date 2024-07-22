@@ -42,7 +42,15 @@ h6 {
 /* button */
 
 .RSbutton {
-  @apply relative py-3 px-6 bg-primary rounded-lg flex items-center justify-center cursor-pointer text-white gap-1 font-bold outline-none overflow-hidden transition-all duration-300 ease-in-out;
+  @apply relative py-2.5 px-6  rounded-lg flex items-center justify-center cursor-pointer text-white gap-1 font-bold outline-none overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.RSbutton-primary {
+  @apply bg-primary;
+}
+
+.RSbutton-secondary {
+  @apply bg-secondary;
 }
 
 .btnicon {
@@ -89,6 +97,46 @@ h6 {
   to {
     left: 100%;
   }
+}
+
+/* checkbox */
+
+/* styles/StyledCheckbox.module.css */
+.checkboxContainer {
+  @apply relative select-none cursor-pointer pl-6 xs:pl-8;
+}
+
+.checkboxInput {
+  @apply absolute opacity-0 cursor-pointer h-0 w-0;
+}
+
+.customCheckbox {
+  @apply absolute top-0 left-0 h-5 w-5 rounded border border-gray-500;
+  transition: background-color 0.3s;
+}
+
+.checkboxContainer input:checked + .customCheckbox {
+  @apply bg-secondary  border-secondary;
+}
+
+.customCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked + .customCheckbox:after {
+  display: block;
+}
+
+.checkboxContainer .customCheckbox:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* header */

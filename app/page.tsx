@@ -24,6 +24,7 @@ import ShippingPlacesBannerMobile from "@/public/assets/images/banners/banner-mo
 import Testimonial from "@/src/components/testimonial";
 import Pricing from "@/src/components/pricingplan";
 import Blog from "@/src/components/blog";
+import SmoothScroll from "@/src/components/SmoothScroll";
 
 const Page = () => {
   const herosettings = {
@@ -161,7 +162,7 @@ const Page = () => {
     };
   }, []);
   return (
-    <>
+    <SmoothScroll>
       <Header />
       <div className="relative pt-16 bg-primarylight lg:pt-0">
         <>
@@ -197,7 +198,7 @@ const Page = () => {
                   Nepal.
                 </p>
                 <div className="inline-block">
-                  <Link href="#" className="mt-8 RSbutton">
+                  <Link href="#" className="mt-8 RSbutton RSbutton-primary">
                     <span className="text-lg">All services</span>
                   </Link>
                 </div>
@@ -407,7 +408,7 @@ const Page = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </SmoothScroll>
   );
 };
 

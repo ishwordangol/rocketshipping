@@ -108,7 +108,7 @@ const About = () => {
                       })}
                     </div>
                     <div className="mt-4 inline-block">
-                      <Link href="#" className="mt-8 RSbutton">
+                      <Link href="#" className="mt-8 RSbutton RSbutton-primary">
                         <span>More About Us</span>
                         <i className="icon-chevron-right text-white text-xl font-bold"></i>
                       </Link>

@@ -193,7 +193,10 @@ const Pricingplan: React.FC = () => {
                     {item.plantitle}
                   </h3>
                 </div>
-                <button type="button" className="mt-4 mb-8 RSbutton w-full">
+                <button
+                  type="button"
+                  className="mt-4 mb-8 RSbutton RSbutton-primary w-full"
+                >
                   Choose Plan
                 </button>
                 <div className="space-y-4">
@@ -245,7 +248,10 @@ const Pricingplan: React.FC = () => {
                   {item.plantitle}
                 </h3>
               </div>
-              <button type="button" className="mt-4 mb-8 RSbutton w-full">
+              <button
+                type="button"
+                className="mt-4 mb-8 RSbutton RSbutton-primary w-full"
+              >
                 Choose Plan
               </button>
               <div className="space-y-4">

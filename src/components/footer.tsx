@@ -174,7 +174,7 @@ const Footer = () => {
                     type="email"
                     className="w-full py-4 px-8 bg-gray-800 rounded-lg outline-none border border-gray-800 focus:border-l-[6px] focus:border-secondary text-gray-400 transition ease-linear"
                   />
-                  <button className="block mt-2 w-full RSbutton">
+                  <button className="block mt-2 w-full RSbutton RSbutton-primary">
                     <span>Subscribe</span>
                     <i className="icon-send text-white text-xl font-bold"></i>
                   </button>

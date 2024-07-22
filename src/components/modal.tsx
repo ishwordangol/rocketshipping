@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div
         ref={modalRef}
-        className="bg-white rounded-lg shadow-lg p-8 min-w-md relative"
+        className="bg-white rounded-lg shadow-lg p-12 min-w-md relative"
       >
         <button
           className="absolute top-2 right-2 text-gray-500 hover:text-primary"
