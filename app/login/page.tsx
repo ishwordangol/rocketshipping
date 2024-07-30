@@ -36,6 +36,7 @@ const Page: React.FC = () => {
             <Image src={LogoMain} alt="Logo" className="h-20 md:h-auto" />
           </Link>
           <div className="bg-white p-8 w-11/12 md:w-full max-w-full md:max-w-lg mx-auto rounded-lg">
+            <h2 className="text-center text-3xl font-bold mb-4">Login</h2>
             <div className="grid grid-cols-1 gap-4">
               <div className="form-group flex flex-col gap-1">
                 <label className="text-black font-bold">Email</label>

@@ -29,13 +29,16 @@ const Page: React.FC = () => {
     console.log("Facebook sign-in clicked");
   };
   return (
-    <div className="bg-primarylight h-screen loginformWrapper relative">
+    <div className="bg-primarylight loginformWrapper relative py-8">
       <div className="container">
-        <form className="flex flex-col justify-center items-center h-screen">
+        <form className="flex flex-col justify-center items-center h-full">
           <Link href="/" className="flex justify-center mb-8">
             <Image src={LogoMain} alt="Logo" className="h-20 md:h-auto" />
           </Link>
           <div className="bg-white p-8 w-11/12 md:w-full max-w-full md:max-w-lg mx-auto rounded-lg">
+            <h2 className="text-center text-3xl font-bold mb-4">
+              Create Account
+            </h2>
             <div className="grid grid-cols-1 gap-4">
               <div className="form-group flex flex-col gap-1">
                 <label className="text-black font-bold">Full Name</label>
