@@ -41,9 +41,9 @@ const Page: React.FC = () => {
             </h2>
             <div className="flex items-center justify-center gap-2">
               <p>Remember Your Password?</p>
-              <a href="./login" className="text-blue-500 hover:text-primary">
+              <Link href="/login" className="text-blue-500 hover:text-primary">
                 Sign In
-              </a>
+              </Link>
             </div>
             <div className="mt-8 grid grid-cols-1 gap-4">
               <div className="form-group flex flex-col gap-1">

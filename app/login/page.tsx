@@ -84,12 +84,12 @@ const Page: React.FC = () => {
                     onChange={handleCheckboxChange}
                   />
                 </div>
-                <a
-                  href="./forgetpassword"
+                <Link
+                  href="/forgetpassword"
                   className="text-sm xs:text-base text-blue-500 hover:text-primary"
                 >
                   Forget password?
-                </a>
+                </Link>
               </div>
               <div className="mt-8">
                 <button className="RSbutton RSbutton-primary w-full">
@@ -99,12 +99,12 @@ const Page: React.FC = () => {
               <div className="flex flex-col justify-center text-center gap-4">
                 <div className="flex items-center justify-center gap-2">
                   <p>Don&apos;t have an account?</p>
-                  <a
-                    href="./signup"
+                  <Link
+                    href="/signup"
                     className="text-blue-500 hover:text-primary"
                   >
                     Sign Up
-                  </a>
+                  </Link>
                 </div>
                 <p>Or With</p>
               </div>
