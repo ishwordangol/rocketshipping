@@ -85,7 +85,7 @@ const Page: React.FC = () => {
                   />
                 </div>
                 <a
-                  href="/forgetpassword"
+                  href="./forgetpassword"
                   className="text-sm xs:text-base text-blue-500 hover:text-primary"
                 >
                   Forget password?
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
                 <div className="flex items-center justify-center gap-2">
                   <p>Don&apos;t have an account?</p>
                   <a
-                    href="/signup"
+                    href="./signup"
                     className="text-blue-500 hover:text-primary"
                   >
                     Sign Up

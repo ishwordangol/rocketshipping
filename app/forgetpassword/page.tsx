@@ -41,7 +41,7 @@ const Page: React.FC = () => {
             </h2>
             <div className="flex items-center justify-center gap-2">
               <p>Remember Your Password?</p>
-              <a href="/login" className="text-blue-500 hover:text-primary">
+              <a href="./login" className="text-blue-500 hover:text-primary">
                 Sign In
               </a>
             </div>
