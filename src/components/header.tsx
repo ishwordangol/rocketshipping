@@ -180,7 +180,26 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <li className="block sm:hidden">
+              <button
+                onClick={openModal}
+                type="button"
+                className="my-3 RSbutton RSbutton-primary w-full"
+              >
+                Track Your Order
+              </button>
+            </li>
+            <li className="block sm:hidden">
+              <button
+                className="my-3 RSbutton RSbutton-secondary w-full"
+                type="button"
+                onClick={() => router.push("/login")}
+              >
+                Login
+              </button>
+            </li>
           </ul>
+
           <button
             onClick={() => setNav(!nav)}
             className="fixed top-8 right-8 z-[999]"
