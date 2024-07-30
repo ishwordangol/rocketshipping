@@ -38,6 +38,28 @@ const Page: React.FC = () => {
           <div className="bg-white p-8 w-11/12 md:w-full max-w-full md:max-w-lg mx-auto rounded-lg">
             <div className="grid grid-cols-1 gap-4">
               <div className="form-group flex flex-col gap-1">
+                <label className="text-black font-bold">Full Name</label>
+                <div className="inputForm flex items-center gap-2 border border-gray-200 h-12 rounded px-3 transition-all ease-linear duration-300 focus-within:border-secondary">
+                  <span className="icon-user text-xl"></span>
+                  <input
+                    type="text"
+                    className="inputbox outline-none flex-1 h-full rounded-lg"
+                    placeholder="Enter Full Name"
+                  />
+                </div>
+              </div>
+              <div className="form-group flex flex-col gap-1">
+                <label className="text-black font-bold">Phone Number</label>
+                <div className="inputForm flex items-center gap-2 border border-gray-200 h-12 rounded px-3 transition-all ease-linear duration-300 focus-within:border-secondary">
+                  <span className="icon-phone text-xl"></span>
+                  <input
+                    type="number"
+                    className="inputbox outline-none flex-1 h-full rounded-lg"
+                    placeholder="Enter Phone Number"
+                  />
+                </div>
+              </div>
+              <div className="form-group flex flex-col gap-1">
                 <label className="text-black font-bold">Email</label>
                 <div className="inputForm flex items-center gap-2 border border-gray-200 h-12 rounded px-3 transition-all ease-linear duration-300 focus-within:border-secondary">
                   <span className="icon-at-sign text-xl"></span>
@@ -74,35 +96,56 @@ const Page: React.FC = () => {
                   </button>
                 </div>
               </div>
+              <div className="form-group flex flex-col gap-1">
+                <label htmlFor="password" className="text-black font-bold">
+                  Confirm Password
+                </label>
+                <div className="inputForm flex items-center gap-2 border border-gray-200 h-12 rounded-lg px-3 transition-all ease-linear duration-300 focus-within:border-secondary">
+                  <span className="icon-lock text-xl"></span>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    id="confirmpassword"
+                    className="inputbox outline-none flex-1 h-full rounded"
+                    placeholder="Enter Confirm Password"
+                    aria-label="Confirm Password"
+                  />
+                  <button
+                    type="button"
+                    onClick={togglePasswordVisibility}
+                    className="focus:outline-none"
+                  >
+                    {showPassword ? (
+                      <span className="icon-eye-off text-xl"></span>
+                    ) : (
+                      <span className="icon-eye text-xl"></span>
+                    )}
+                  </button>
+                </div>
+              </div>
 
-              <div className="flex justify-between items-ceter">
+              <div className="flex gap-2 items-center">
                 <div className="checkbox-group">
                   <Checkbox
-                    label="Remember Me"
+                    label=""
                     checked={isChecked}
                     onChange={handleCheckboxChange}
                   />
                 </div>
-                <a
-                  href="/forgetpassword"
-                  className="text-sm xs:text-base text-blue-500 hover:text-primary"
-                >
-                  Forget password?
-                </a>
+                <p>
+                  By clicking Sign up for Free, you agree to Rocket Shipping
+                  Terms Of Service and Privacy Policy.
+                </p>
               </div>
               <div className="mt-8">
                 <button className="RSbutton RSbutton-primary w-full">
-                  Sign In
+                  Sign Up
                 </button>
               </div>
               <div className="flex flex-col justify-center text-center gap-4">
                 <div className="flex items-center justify-center gap-2">
-                  <p>Don&apos;t have an account?</p>
-                  <a
-                    href="/signup"
-                    className="text-blue-500 hover:text-primary"
-                  >
-                    Sign Up
+                  <p>Already have an account?</p>
+                  <a href="/login" className="text-blue-500 hover:text-primary">
+                    Sign In
                   </a>
                 </div>
                 <p>Or With</p>
