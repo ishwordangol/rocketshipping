@@ -2,7 +2,7 @@ import React from "react";
 
 const trackingorder = () => {
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap lg:flex-nowrap items-center gap-2">
       <input
         placeholder="Enter Tracking Number"
         type="text"
